@@ -34,3 +34,6 @@ RDEPENDS_${PN}-tests += " \
     ${PN} \
     ${PYTHON_PN}-unittest \
 "
+
+# meta-python recipe did not follow Debian naming
+PROVIDES += "pyrtm"

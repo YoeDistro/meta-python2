@@ -13,3 +13,6 @@ RDEPENDS_${PN} = "libpam"
 
 inherit features_check
 REQUIRED_DISTRO_FEATURES = "pam"
+
+# meta-python recipe did not follow Debian naming
+PROVIDES += "pamela"
