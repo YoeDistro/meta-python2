@@ -11,7 +11,7 @@ LIC_FILES_CHKSUM = "file://PKG-INFO;beginline=10;endline=10;md5=23f9ad5cad3d8cc0
 SRC_URI[md5sum] = "bc1558ed941cb1acb80ff650726d5af8"
 SRC_URI[sha256sum] = "bc37850f0cc42a1725a796ef7d92690651bf1af37d744cc63161dac62cabee17"
 
-inherit pypi setuptools
+inherit pypi setuptools python-backports-init
 
 RDEPENDS_${PN} += "python-pkgutil"
 

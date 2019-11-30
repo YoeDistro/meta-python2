@@ -11,7 +11,7 @@ SRC_URI[sha256sum] = "9d98697f088eb1b0fa451391f91afb5e3ebde16bbdb272819fd091151f
 
 DEPENDS += "python-setuptools-scm-native"
 
-inherit setuptools pypi
+inherit setuptools pypi python-backports-init
 
 RDEPENDS_${PN} += "\
     ${PYTHON_PN}-pickle \
