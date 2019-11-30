@@ -5,8 +5,8 @@ HOMEPAGE = "http://www.pycryptodome.org"
 LICENSE = "PD & BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.rst;md5=6dc0e2a13d2f25d6f123c434b761faba"
 
-SRC_URI[md5sum] = "c4e53f9ed33ca883b18249b9e1546251"
-SRC_URI[sha256sum] = "39ddc3c493125494572e0beefa8e8e6a43369e93c3c3e163cb871b37c1c62fba"
+SRC_URI[md5sum] = "3a34a9c337c4ba9f388ace099d733fc5"
+SRC_URI[sha256sum] = "e87c272263559d657ab3b990be8174c0d492cbc2f4f8d0bddfaef82dfe05d54c"
 
 inherit pypi setuptools
 

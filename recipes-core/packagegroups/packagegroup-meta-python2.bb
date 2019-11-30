@@ -35,7 +35,7 @@ RDEPENDS_packagegroup-meta-python2 = "\
     python-whoosh python-lockfile python-isort python-wtforms python-feedparser python-flask-restful \
     python-pysnmp python-flask-babel python-pytest-tempdir python-flask-nav python-pyzmq python-pyyaml \
     python-protobuf python-pluggy python-jsonschema python-msgpack \
-    python-periphery python-pint python-pycryptodome python-yappi python-pycrypto python-pretend \
+    python-periphery python-pint python-pycryptodomex python-yappi python-pycrypto python-pretend \
     python-pyserial python-pyiface python-docutils python-grpcio-tools python-django-south \
     python-backports-functools-lru-cache python-py python-click python-flask-migrate \
     python-pyudev python-pystache python-blinker python-prompt-toolkit python-lxml \

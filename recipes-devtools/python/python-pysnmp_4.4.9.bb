@@ -20,7 +20,7 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 
 inherit setuptools
 
-RDEPENDS_${PN} += "python-pycrypto \
+RDEPENDS_${PN} += "python-pycryptodomex \
                    python-pyasn1 \
                    python-pysmi \
 "
