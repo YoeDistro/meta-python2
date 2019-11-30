@@ -1,7 +1,9 @@
+SUMMARY = "An asynchronous networking framework written in Python"
 DESCRIPTION = "Twisted is an event-driven networking framework written in Python and licensed under the LGPL. \
 Twisted supports TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols                   \
 (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and much more."
 HOMEPAGE = "http://www.twistedmatrix.com"
+SECTION = "devel/python"
 
 #twisted/topfiles/NEWS:655: - Relicensed: Now under the MIT license, rather than LGPL.
 LICENSE = "MIT"
@@ -18,7 +20,7 @@ do_install_append() {
     find ${D} \( -name "*.bat" -o -name "*.c" -o -name "*.h" \) -exec rm -f {} \;
 }
 
-PACKAGES += "\
+PACKAGES =+ "\
     ${PN}-zsh \
     ${PN}-test \
     ${PN}-protocols \
@@ -73,22 +75,22 @@ ALLOW_EMPTY_${PN} = "1"
 FILES_${PN} = ""
 
 FILES_${PN}-test = " \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/test \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/*/test \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/protocols/haproxy/test/ \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/test \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/*/test \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/haproxy/test/ \
 "
 
 FILES_${PN}-protocols = " \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/protocols/*.py* \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/protocols/gps/ \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/protocols/mice/ \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/protocols/haproxy \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/*.py* \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/gps/ \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/mice/ \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/haproxy \
 "
 
 FILES_${PN}-zsh = " \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/python/zsh \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/python/zshcomp.* \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/python/twisted-completion.zsh \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/python/zsh \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/python/zshcomp.* \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/python/twisted-completion.zsh \
 "
 
 FILES_${PN}-conch = " \
@@ -97,8 +99,8 @@ FILES_${PN}-conch = " \
     ${bindir}/conch \
     ${bindir}/conchftp \
     ${bindir}/cftp \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_conch.py* \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/conch  \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_conch.py* \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/conch  \
 "
 
 FILES_${PN}-core = " \
@@ -112,143 +114,143 @@ ${bindir}/tkmktap \
 ${bindir}/trial \
 ${bindir}/easy_install* \
 ${bindir}/pyhtmlizer \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/*.so \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/*.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/__init__.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/notestplugin.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/testplugin.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_ftp.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_inet.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_manhole.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_portforward.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_socks.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_telnet.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_trial.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/dropin.cache \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/application \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/cred \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/enterprise \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/internet \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/manhole \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/manhole \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/persisted \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/protocols\
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python\
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/timeoutqueue.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/filepath.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/dxprofile.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/plugin.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/htmlizer.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/__init__.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/dispatch.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/hook.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/threadpool.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/otp.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/usage.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/roots.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/versions.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/urlpath.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/util.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/components.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/logfile.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/runtime.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/reflect.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/context.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/threadable.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/rebuild.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/failure.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/lockfile.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/formmethod.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/finalize.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/win32.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/dist.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/shortcut.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/zipstream.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/release.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/syslog.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/log.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/compat.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/zshcomp.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/procutils.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/text.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/_twisted_zsh_stub \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/scripts/ \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/spread/ \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/tap/ \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/trial/ \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/__init__.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/_version.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/copyright.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/im.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/*.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/python/*.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/*.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/topfiles \
-${libdir}/${PYTHON_DIR}/site-packages/Twisted*egg-info \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/logger/ \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/_threads/ \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/positioning/ \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/*.so \
+${PYTHON_SITEPACKAGES_DIR}/twisted/*.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/__init__.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/notestplugin.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/testplugin.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_ftp.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_inet.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_manhole.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_portforward.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_socks.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_telnet.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_trial.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/dropin.cache \
+${PYTHON_SITEPACKAGES_DIR}/twisted/application \
+${PYTHON_SITEPACKAGES_DIR}/twisted/cred \
+${PYTHON_SITEPACKAGES_DIR}/twisted/enterprise \
+${PYTHON_SITEPACKAGES_DIR}/twisted/internet \
+${PYTHON_SITEPACKAGES_DIR}/twisted/manhole \
+${PYTHON_SITEPACKAGES_DIR}/twisted/manhole \
+${PYTHON_SITEPACKAGES_DIR}/twisted/persisted \
+${PYTHON_SITEPACKAGES_DIR}/twisted/protocols\
+${PYTHON_SITEPACKAGES_DIR}/twisted/python\
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/timeoutqueue.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/filepath.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/dxprofile.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/plugin.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/htmlizer.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/__init__.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/dispatch.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/hook.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/threadpool.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/otp.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/usage.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/roots.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/versions.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/urlpath.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/util.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/components.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/logfile.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/runtime.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/reflect.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/context.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/threadable.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/rebuild.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/failure.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/lockfile.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/formmethod.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/finalize.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/win32.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/dist.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/shortcut.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/zipstream.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/release.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/syslog.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/log.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/compat.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/zshcomp.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/procutils.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/text.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/_twisted_zsh_stub \
+${PYTHON_SITEPACKAGES_DIR}/twisted/scripts/ \
+${PYTHON_SITEPACKAGES_DIR}/twisted/spread/ \
+${PYTHON_SITEPACKAGES_DIR}/twisted/tap/ \
+${PYTHON_SITEPACKAGES_DIR}/twisted/trial/ \
+${PYTHON_SITEPACKAGES_DIR}/twisted/__init__.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/_version.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/copyright.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/im.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/*.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/python/*.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/*.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/topfiles \
+${PYTHON_SITEPACKAGES_DIR}/Twisted*egg-info \
+${PYTHON_SITEPACKAGES_DIR}/twisted/logger/ \
+${PYTHON_SITEPACKAGES_DIR}/twisted/_threads/ \
+${PYTHON_SITEPACKAGES_DIR}/twisted/positioning/ \
 "
 
 FILES_${PN}-mail = " \
 ${bindir}/mailmail \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_mail.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/mail \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_mail.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/mail \
 "
 
 FILES_${PN}-names = " \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_names.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/names \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_names.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/names \
 "
 
 FILES_${PN}-news = " \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_news.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/news \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_news.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/news \
 "
 
 FILES_${PN}-runner = " \
 ${libdir}/site-packages/twisted/runner/portmap.so \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/runner\
+${PYTHON_SITEPACKAGES_DIR}/twisted/runner\
 "
 
 FILES_${PN}-web = " \
 ${bindir}/websetroot \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_web.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/web\
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_web.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/web\
 "
 
 FILES_${PN}-words = " \
 ${bindir}/im \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_words.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/words\
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_words.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/words\
 "
 
 FILES_${PN}-flow = " \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_flow.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/flow \"
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_flow.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/flow \"
 
 FILES_${PN}-pair = " \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/plugins/twisted_pair.py* \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/pair \
+${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_pair.py* \
+${PYTHON_SITEPACKAGES_DIR}/twisted/pair \
 "
 
 FILES_${PN}-dbg += " \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/*/.debug \
-${libdir}/${PYTHON_DIR}/site-packages/twisted/*/*/.debug \
+${PYTHON_SITEPACKAGES_DIR}/twisted/*/.debug \
+${PYTHON_SITEPACKAGES_DIR}/twisted/*/*/.debug \
 "
 
 FILES_${PN}-doc += " \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/python/_pydoctortemplates/ \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/python/_pydoctortemplates/ \
 "
 
 RDEPENDS_${PN}-src = "${PN}"
 FILES_${PN}-src = " \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/*.py \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/*/*.py \
-    ${libdir}/${PYTHON_DIR}/site-packages/twisted/*/*/*.py \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/*.py \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/*/*.py \
+    ${PYTHON_SITEPACKAGES_DIR}/twisted/*/*/*.py \
 "
 
-inherit pypi setuptools
+inherit pypi python-dir setuptools
 
 RDEPENDS_${PN}-core += "${PYTHON_PN}-contextlib"
 
