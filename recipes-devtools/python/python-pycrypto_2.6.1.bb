@@ -13,7 +13,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/python-pycrypto:"
 
 DEPENDS += " gmp"
 
-inherit pypi autotools-brokensep distutils
+export HOST_SYS
+
+inherit autotools pypi autotools-brokensep distutils
 
 SRC_URI += "file://cross-compiling.patch \
             file://CVE-2013-7459.patch \
