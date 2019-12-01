@@ -55,31 +55,33 @@ RDEPENDS_packagegroup-meta-python2 = "\
     python-numeric python-robotframework python-django python-simplejson python-wcwidth \
     python-configparser python-epydoc python-intervals python-speaklater \
     python-aws-iot-device-sdk-python python-constantly python-bitarray python-flask-wtf \
-    python-parse-type python-ipaddress python-dbus \
+    python-parse-type python-ipaddress python-dbus python-cpuset python-distutils-extra \
+    python-futures python-jsmin python-pygobject python-pytoml python-six python-which \
     ${@bb.utils.contains("DISTRO_FEATURES", "pam", "python-pam pamela", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "python-systemd", "", d)} \
 "
 
 RDEPENDS_packagegroup-meta-python2-extended = "\
-    python-pyephem \
     python-cson \
-    python-pywbem \
+    python-pyephem \
     python-pyparted \
+    python-pywbem \
 "
 
 RDEPENDS_packagegroup-meta-python2-connectivity = "\
+    python-gsocketpool \
+    python-mprpc \
+    python-networkmanager \
+    python-pyconnman \
     python-pyro4 \
     python-pytun \
-    python-mprpc \
     python-thrift \
     python-txws \
-    python-pyconnman \
-    python-gsocketpool \
 "
 
 RDEPENDS_packagegroup-meta-python2-ptest = "\
-    python-pygpgme-ptest \
     python-cryptography-ptest \
-    "
+    python-pygpgme-ptest \
+"
 
 EXCLUDE_FROM_WORLD = "1"
