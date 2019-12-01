@@ -44,6 +44,7 @@ RDEPENDS_${PN}_class-target += " \
 RDEPENDS_${PN}-ptest += " \
     ${PN} \
     ${PYTHON_PN}-cryptography-vectors \
+    ${PYTHON_PN}-hypothesis \
     ${PYTHON_PN}-iso8601 \
     ${PYTHON_PN}-pretend \
     ${PYTHON_PN}-pytest \
