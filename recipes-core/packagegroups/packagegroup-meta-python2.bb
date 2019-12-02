@@ -57,6 +57,7 @@ RDEPENDS_packagegroup-meta-python2 = "\
     python-aws-iot-device-sdk-python python-constantly python-bitarray python-flask-wtf \
     python-parse-type python-ipaddress python-dbus python-cpuset python-distutils-extra \
     python-futures python-jsmin python-pygobject python-pytoml python-six python-which \
+    python-netifaces python-configargparse python-sqlparse \
     ${@bb.utils.contains("DISTRO_FEATURES", "pam", "python-pam pamela", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "python-systemd", "", d)} \
 "
