@@ -2,12 +2,13 @@ SUMMARY = "A high-level Python Web framework"
 DESCRIPTION = "A high-level Python Web framework that encourages rapid \
 development and clean, pragmatic design."
 HOMEPAGE = "http://www.djangoproject.com/"
+SECTION = "devel/python"
 
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f09eb47206614a4954c51db8a94840fa"
 
-SRC_URI[md5sum] = "38e82b59a1c27bbf98ccf0564ead7426"
-SRC_URI[sha256sum] = "eb9271f0874f53106a2719c0c35ce67631f6cc27cf81a60c6f8c9817b35a3f6e"
+SRC_URI[md5sum] = "858e5417a10ce565a15d6e4a2ea0ee37"
+SRC_URI[sha256sum] = "861db7f82436ab43e1411832ed8dca81fc5fc0f7c2039c7e07a080a63092fb44"
 
 PYPI_PACKAGE = "Django"
 
