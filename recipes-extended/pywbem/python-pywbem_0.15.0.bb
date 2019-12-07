@@ -1,4 +1,3 @@
-
 SUMMARY = "Python WBEM Client and Provider Interface"
 DESCRIPTION = "\
 A Python library for making CIM (Common Information Model) operations over \
@@ -17,11 +16,14 @@ HOMEPAGE = "http://pywbem.github.io"
 SECTION = "devel/python"
 
 LICENSE = "LGPLv2.1"
-LIC_FILES_CHKSUM = "file://pywbem/LICENSE.txt;md5=fbc093901857fcd118f065f900982c24"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=fbc093901857fcd118f065f900982c24"
 
-SRC_URI[md5sum] = "1465dfa92e4cbe558c773838b9b00711"
-SRC_URI[sha256sum] = "2a05f2c1a6ab4b08560a6da55fdaabd0f52f4d1e6df6e288b9ed927bf5c289ed"
+inherit pypi setuptools update-alternatives
 
+SRCREV = "b3386b3bee8876d15f0745147c0b08937d8ab18e"
+PYPI_SRC_URI = "git://github.com/pywbem/pywbem;protocol=https;branch=stable_0.15"
+
+S = "${WORKDIR}/git"
 
 DEPENDS += " \
     ${PYTHON_PN}-m2crypto-native \
@@ -31,7 +33,6 @@ DEPENDS += " \
     ${PYTHON_PN}-typing-native \
 "
 
-inherit pypi setuptools update-alternatives
 
 do_install_append() {
     mv ${D}${bindir}/wbemcli.py ${D}${bindir}/pywbemcli
