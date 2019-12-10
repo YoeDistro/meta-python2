@@ -45,10 +45,6 @@ DEBUG_OPTIMIZATION_append_mipsel = " -O"
 BUILD_OPTIMIZATION_remove_mipsel = " -Og"
 BUILD_OPTIMIZATION_append_mipsel = " -O"
 
-do_configure_prepend() {
-    sed -i -e 's/--version/--modversion/' ${B}/setupinfo.py
-}
-
 RDEPENDS_${PN} += "libxml2 libxslt ${PYTHON_PN}-compression"
 RDEPENDS_${PN}_class-native = "libxml2-native libxslt-native"
 
