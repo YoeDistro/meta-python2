@@ -28,4 +28,11 @@ do_compile_prepend() {
 # python-native/python: can't open file 'setup.py': [Errno 2] No such file or directory
 CLEANBROKEN = "1"
 
+RDEPENDS_${PN} += "\
+    ${PYTHON_PN}-dbus \
+    ${PYTHON_PN}-decorator \
+    ${PYTHON_PN}-pygobject \
+    ${PYTHON_PN}-six \
+    "
+
 inherit setuptools
