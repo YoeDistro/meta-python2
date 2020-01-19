@@ -19,7 +19,15 @@ PYPI_PACKAGE = "M2Crypto"
 
 inherit pypi siteinfo setuptools
 
-RDEPENDS_${PN} += "python-typing"
+RDEPENDS_${PN} += "\
+    ${PYTHON_PN}-datetime \
+    ${PYTHON_PN}-distutils \
+    ${PYTHON_PN}-logging \
+    ${PYTHON_PN}-netserver \
+    ${PYTHON_PN}-smtpd \
+    ${PYTHON_PN}-typing \
+    ${PYTHON_PN}-xmlrpc \
+    "
 
 DISTUTILS_BUILD_ARGS += "build_ext --openssl=${STAGING_EXECPREFIXDIR} -I${STAGING_INCDIR}"
 DISTUTILS_INSTALL_ARGS += "build_ext --openssl=${STAGING_EXECPREFIXDIR}"
