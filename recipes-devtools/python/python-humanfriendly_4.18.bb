@@ -15,12 +15,15 @@ inherit pypi setuptools
 RDEPENDS_${PN}_class-target += " \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-fcntl \
+    ${PYTHON_PN}-html \
     ${PYTHON_PN}-io \
     ${PYTHON_PN}-logging \
     ${PYTHON_PN}-math \
+    ${PYTHON_PN}-multiprocessing \
     ${PYTHON_PN}-numbers \
     ${PYTHON_PN}-shell \
     ${PYTHON_PN}-stringold \
+    ${PYTHON_PN}-unittest \
 "
 
 BBCLASSEXTEND = "native"
