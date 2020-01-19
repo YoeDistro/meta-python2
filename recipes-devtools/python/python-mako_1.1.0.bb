@@ -13,6 +13,7 @@ inherit pypi setuptools
 
 RDEPENDS_${PN} = " \
     ${PYTHON_PN}-html \
+    ${PYTHON_PN}-misc \
     ${PYTHON_PN}-netclient \
     ${PYTHON_PN}-shell \
     ${PYTHON_PN}-threading \
