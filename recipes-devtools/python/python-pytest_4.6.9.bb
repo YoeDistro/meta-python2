@@ -1,13 +1,12 @@
 SUMMARY = "Simple powerful teting with python"
 HOMEPAGE = "http://pytest.org"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=640061b8cee64b308a4d2f9f556c12f2"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=81eb9f71d006c6b268cf4388e3c98f7b"
 
 SRC_URI += " file://0001-setup.py-remove-setup_requires-for-setuptools-scm.patch"
 
-SRC_URI[md5sum] = "0cf02e80d916a81a3d4fa425eb8063c5"
-SRC_URI[sha256sum] = "692d9351353ef709c1126266579edd4fd469dcf6b5f4f583050f72161d6f3592"
-
+SRC_URI[md5sum] = "d0457c5ddd0438e3b68b7939339d915f"
+SRC_URI[sha256sum] = "19e8f75eac01dd3f211edd465b39efbcbdc8fc5f7866d7dd49fedb30d8adf339"
 
 inherit update-alternatives pypi setuptools
 
