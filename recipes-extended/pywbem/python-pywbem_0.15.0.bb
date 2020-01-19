@@ -44,7 +44,9 @@ RDEPENDS_${PN}_class-target += "\
     ${PYTHON_PN}-argparse \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-io \
+    ${PYTHON_PN}-logging \
     ${PYTHON_PN}-m2crypto \
+    ${PYTHON_PN}-misc \
     ${PYTHON_PN}-netclient \
     ${PYTHON_PN}-ply \
     ${PYTHON_PN}-pyyaml \
