@@ -19,14 +19,9 @@ RDEPENDS_${PN} = "\
     ${PYTHON_PN}-soupsieve \
 "
 
-# class override, which is not
-# inheriting from above (FIXME?)
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS_${PN}_append_class-target = "\
     ${PYTHON_PN}-html \
-    ${PYTHON_PN}-html5lib \
     ${PYTHON_PN}-logging \
-    ${PYTHON_PN}-lxml \
-    ${PYTHON_PN}-soupsieve \
 "
 
 BBCLASSEXTEND = "native nativesdk"
