@@ -14,7 +14,7 @@ local_conf_header:
     DISTRO_FEAURES_append = " ptest"
     EXTRA_IMAGE_FEATURES = "debug-tweaks"
     TESTIMAGE_AUTO = "1"
-    TEST_SUITES = " ping ssh ptest"
+    TEST_SUITES = " ping ssh python2 ptest"
     TEST_QEMUPARAMS += "-smp 4 -m 8192"
     TEST_RUNQEMUPARAMS += "kvm gl"
     IMAGE_ROOTFS_SIZE ?= "8192"
