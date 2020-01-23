@@ -22,11 +22,12 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 
 UNKNOWN_CONFIGURE_WHITELIST = "introspection"
 
+EXTRA_OEMESON_append = " -Dpython=python2"
+
 PACKAGECONFIG ??= "stagedir"
 
 PACKAGECONFIG[cairo] = "-Dpycairo=true,-Dpycairo=false, cairo python-pycairo, python-pycairo"
 PACKAGECONFIG[tests] = "-Dtests=true, -Dtests=false, , "
-PACKAGECONFIG[python] = "-Dpython=python3, -Dpython=python2, , "
 PACKAGECONFIG[stagedir] = "-Dstagedir=${PYTHON_SITEPACKAGES_DIR}, -Dstagedir="", , "
 
 BBCLASSEXTEND = "native"
