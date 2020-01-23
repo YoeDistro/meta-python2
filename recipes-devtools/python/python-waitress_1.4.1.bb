@@ -10,3 +10,10 @@ SRC_URI[md5sum] = "e6b9f0406cb4e6fedcc3add96411786d"
 SRC_URI[sha256sum] = "f4118cbce75985fd60aeb4f0d781aba8dc7ae28c18e50753e913d7a7dee76b62"
 
 inherit setuptools pypi
+
+RDEPENDS_${PN}_append_class-target = "\
+    ${PYTHON_PN}-datetime \
+    ${PYTHON_PN}-io \
+    ${PYTHON_PN}-logging \
+    ${PYTHON_PN}-re \
+    "
