@@ -31,7 +31,7 @@ PACKAGECONFIG[tests] = "-Dtests=true, -Dtests=false, , "
 PACKAGECONFIG[stagedir] = "-Dstagedir=${PYTHON_SITEPACKAGES_DIR}, -Dstagedir="", , "
 
 BBCLASSEXTEND = "native"
-RDEPENDS_${PN} = "python-pkgutil"
+RDEPENDS_${PN} = "python-io python-pkgutil"
 RDEPENDS_${PN}_class-native = ""
 
 do_install_append() {
