@@ -23,4 +23,12 @@ PYPI_PACKAGE = "pyperf"
 
 DEPENDS += "${PYTHON_PN}-six-native"
 
-RDEPENDS_${PN} += "${PYTHON_PN}-statistics"
+RDEPENDS_${PN} += "\
+    ${PYTHON_PN}-contextlib \
+    ${PYTHON_PN}-datetime \
+    ${PYTHON_PN}-fcntl \
+    ${PYTHON_PN}-math \
+    ${PYTHON_PN}-numbers \
+    ${PYTHON_PN}-six \
+    ${PYTHON_PN}-statistics \
+"
