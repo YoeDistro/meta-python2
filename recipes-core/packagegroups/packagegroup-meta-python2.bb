@@ -58,7 +58,7 @@ RDEPENDS_packagegroup-meta-python2 = "\
     python-parse-type python-ipaddress python-dbus python-cpuset python-distutils-extra \
     python-futures python-jsmin python-pygobject python-pytoml python-six python-which \
     python-netifaces python-configargparse python-sqlparse python-soupsieve python-wrapt \
-    python-deprecated \
+    python-deprecated python-booleanpy \
     ${@bb.utils.contains("DISTRO_FEATURES", "pam", "python-pam pamela", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "python-systemd", "", d)} \
 "
@@ -82,6 +82,7 @@ RDEPENDS_packagegroup-meta-python2-connectivity = "\
 "
 
 RDEPENDS_packagegroup-meta-python2-ptest = "\
+    python-booleanpy-ptest \
     python-cryptography-ptest \
     python-pygpgme-ptest \
 "
