@@ -22,6 +22,7 @@ RDEPENDS_${PN}_class-target += " \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-io \
     ${PYTHON_PN}-netclient \
+    ${PYTHON_PN}-numbers \
     ${PYTHON_PN}-subprocess \
     ${PYTHON_PN}-textutils \ 
 "
