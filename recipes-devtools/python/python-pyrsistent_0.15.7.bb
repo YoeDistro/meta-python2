@@ -12,4 +12,8 @@ RDEPENDS_${PN} += " \
     ${PYTHON_PN}-six \
 "
 
+RDEPENDS_${PN}_append_class-target = "\
+    ${PYTHON_PN}-numbers \
+"
+
 BBCLASSEXTEND = "native nativesdk"
