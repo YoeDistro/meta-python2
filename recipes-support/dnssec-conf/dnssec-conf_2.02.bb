@@ -32,4 +32,10 @@ do_install () {
     install -m 0644 packaging/fedora/dnssec.sysconfig ${D}${sysconfdir}/sysconfig/dnssec
 }
 
-RDEPENDS_${PN} = "python"
+RDEPENDS_${PN} = "\
+    bind-utils \
+    curl \
+    python \
+    python-dnspython \
+    python-pyparsing \
+"
