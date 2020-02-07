@@ -63,25 +63,35 @@ RDEPENDS_${PN} = "\
     ${PN}-zsh \
 "
 
-RDEPENDS_${PN}-core = "${PYTHON_PN}-automat \
-                       ${PYTHON_PN}-constantly \
-                       ${PYTHON_PN}-core \
-                       ${PYTHON_PN}-debugger \
-                       ${PYTHON_PN}-hyperlink \
-                       ${PYTHON_PN}-incremental \
-                       ${PYTHON_PN}-misc \
-                       ${PYTHON_PN}-pkg-resources \
-                       ${PYTHON_PN}-pkgutil \
-                       ${PYTHON_PN}-plistlib \
-                       ${PYTHON_PN}-pyhamcrest \
-                       ${PYTHON_PN}-pyserial \
-                       ${PYTHON_PN}-setuptools \
-                       ${PYTHON_PN}-unixadmin \
-                       ${PYTHON_PN}-zopeinterface \
+RDEPENDS_${PN}-core = " \
+    ${PYTHON_PN}-automat \
+    ${PYTHON_PN}-constantly \
+    ${PYTHON_PN}-core \
+    ${PYTHON_PN}-debugger \
+    ${PYTHON_PN}-hyperlink \
+    ${PYTHON_PN}-incremental \
+    ${PYTHON_PN}-misc \
+    ${PYTHON_PN}-pkg-resources \
+    ${PYTHON_PN}-pkgutil \
+    ${PYTHON_PN}-plistlib \
+    ${PYTHON_PN}-pyhamcrest \
+    ${PYTHON_PN}-pyserial \
+    ${PYTHON_PN}-setuptools \
+    ${PYTHON_PN}-unixadmin \
+    ${PYTHON_PN}-zopeinterface \
 "
 
 RDEPENDS_${PN}-test = "${PN}"
-RDEPENDS_${PN}-conch = "${PN}-core ${PN}-protocols ${PYTHON_PN}-bcrypt ${PYTHON_PN}-cryptography ${PYTHON_PN}-pyasn1 ${PYTHON_PN}-pickle"
+
+RDEPENDS_${PN}-conch = " \
+    ${PN}-core \
+    ${PN}-protocols \
+    ${PYTHON_PN}-bcrypt \
+    ${PYTHON_PN}-cryptography \
+    ${PYTHON_PN}-pickle \
+    ${PYTHON_PN}-pyasn1 \
+"
+
 RDEPENDS_${PN}-mail = "${PN}-core ${PN}-protocols"
 RDEPENDS_${PN}-names = "${PN}-core"
 RDEPENDS_${PN}-news = "${PN}-core ${PN}-protocols"
