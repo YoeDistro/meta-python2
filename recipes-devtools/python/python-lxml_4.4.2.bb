@@ -21,6 +21,10 @@ SRC_URI[sha256sum] = "eff69ddbf3ad86375c344339371168640951c302450c5d3e9936e98d64
 
 DEPENDS += "libxml2 libxslt"
 
+inherit pypi setuptools
+
+# add to the defaults which are set in the setuptools bbclass
+#
 DISTUTILS_BUILD_ARGS += " \
                      --with-xslt-config='pkg-config libxslt' \
                      --with-xml2-config='pkg-config libxml-2.0' \
@@ -30,8 +34,6 @@ DISTUTILS_INSTALL_ARGS += " \
                      --with-xslt-config='pkg-config libxslt' \
                      --with-xml2-config='pkg-config libxml-2.0' \
 "
-
-inherit pypi setuptools
 
 # {standard input}: Assembler messages:
 # {standard input}:1488805: Error: branch out of range
