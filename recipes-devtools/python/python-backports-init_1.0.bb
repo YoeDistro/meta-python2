@@ -23,3 +23,5 @@ do_install() {
 }
 
 FILES_${PN} = "${PYTHON_SITEPACKAGES_DIR}/backports/__init__.py"
+
+BBCLASSEXTEND = "native nativesdk"
