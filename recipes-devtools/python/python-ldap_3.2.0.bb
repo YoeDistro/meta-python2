@@ -23,9 +23,15 @@ do_configure_prepend() {
     sed -i -e 's:^include_dirs =.*:include_dirs = =/usr/include/sasl/:' setup.cfg
 }
 
+
 RDEPENDS_${PN} = " \
     ${PYTHON_PN}-pprint \
     ${PYTHON_PN}-threading \
     ${PYTHON_PN}-pyasn1 \
     ${PYTHON_PN}-pyasn1-modules \
 "
+
+python() {
+    if 'networking-layer' not in d.getVar('BBFILE_COLLECTIONS').split():
+        raise bb.parse.SkipRecipe('Requires networking-layer to be present to provide cyrus-sasl.')
+}
