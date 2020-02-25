@@ -25,3 +25,5 @@ do_install() {
 }
 
 FILES_${PN} = "${PYTHON_SITEPACKAGES_DIR}/backports/functools_lru_cache.py"
+
+BBCLASSEXTEND = "native nativesdk"
