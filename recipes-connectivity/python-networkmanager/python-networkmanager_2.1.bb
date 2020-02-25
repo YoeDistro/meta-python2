@@ -11,3 +11,8 @@ PYPI_PACKAGE = "python-networkmanager"
 inherit pypi setuptools
 
 RDEPENDS_${PN} = "networkmanager python-dbus python-six"
+
+python() {
+    if 'networking-layer' not in d.getVar('BBFILE_COLLECTIONS').split():
+        raise bb.parse.SkipRecipe('Requires networking-layer to be present to provide networkmanager.')
+}
