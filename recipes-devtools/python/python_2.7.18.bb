@@ -153,7 +153,7 @@ PACKAGES_remove = "${PN}"
 # manual dependency additions
 RPROVIDES_${PN}-modules = "${PN}"
 RRECOMMENDS_${PN}-core_append_class-nativesdk = " nativesdk-python-modules"
-RRECOMMENDS_${PN}-crypt = "openssl"
+RRECOMMENDS_${PN}-crypt = "${MLPREFIX}openssl"
 
 # package libpython2
 PACKAGES =+ "lib${BPN}2"
