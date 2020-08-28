@@ -11,8 +11,11 @@ LIC_FILES_CHKSUM = "\
     file://src/_pedmodule.c;beginline=10;endline=22;md5=9e53304db812b80d0939e11bb69dcab2 \
 "
 
+# 3.11.4 tag + gcc10 fixes for -fno-common
+PV = "3.11.4+git${SRCPV}"
+
 # upstream only publishes releases in github archives which are discouraged
-SRCREV = "481510c10866851844b19f3d2ffcdaa37efc0cf8"
+SRCREV = "104ca13567c08c1188b126a395c4602841aae2c6"
 SRC_URI = "git://github.com/rhinstaller/pyparted.git;protocol=https"
 
 DEPENDS += "parted"
