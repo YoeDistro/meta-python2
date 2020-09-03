@@ -256,5 +256,5 @@ do_create_manifest() {
 addtask do_create_manifest
 
 # Make sure we have native python ready when we create a new manifest
-do_create_manifest[depends] += "python:do_prepare_recipe_sysroot"
-do_create_manifest[depends] += "python:do_patch"
+do_create_manifest[depends] += "${PN}:do_prepare_recipe_sysroot"
+do_create_manifest[depends] += "${PN}:do_patch"
