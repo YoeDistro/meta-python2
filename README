@@ -78,6 +78,9 @@ It is expected that ANY upgrades to a recipe will have undergone run-time testin
 the upgrade. Many other developers depend upon the quality of this layer and will be quite upset with
 you when you break their builds.
 
+It is expected that any patch adding a new recipe will also add the recipe to packagegroup-meta-python2.
+This packagegroup is critical to the function of the CI system behind maintenance of this layer.
+
 Commit messages must include a "Signed-off-by:" line, including a valid email address and a legal name
 (not a nickname). The "Signed-off-by:" line means that you are either the author or have the legal right
 to submit the work. Please refer to the "Submitting a patch to OpenEmbedded" [6] and "Commit Patch
