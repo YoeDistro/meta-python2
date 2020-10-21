@@ -59,7 +59,7 @@ RDEPENDS_packagegroup-meta-python2 = "\
     python-futures python-jsmin python-pygobject python-pytoml python-six python-which \
     python-netifaces python-configargparse python-sqlparse python-soupsieve python-wrapt \
     python-deprecated python-booleanpy python-docker-pycreds python-websocket-client \
-    python-docker \
+    python-docker python-kombu python-amqp python-vine \
     ${@bb.utils.contains("DISTRO_FEATURES", "pam", "python-pam pamela", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "python-systemd", "", d)} \
 "
