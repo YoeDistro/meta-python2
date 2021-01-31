@@ -73,7 +73,7 @@ python(){
         manifest_str = manifest_file.read()
         python_manifest = json.loads(manifest_str)
 
-    rprovides = d.getVar('RPROVIDES').split()
+    rprovides = (d.getVar('RPROVIDES') or "").split()
 
     # Hardcoded since it cant be python-native-foo, should be python-foo-native
     pn = 'python'
