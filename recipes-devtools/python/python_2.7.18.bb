@@ -258,3 +258,9 @@ addtask do_create_manifest
 # Make sure we have native python ready when we create a new manifest
 do_create_manifest[depends] += "${PN}:do_prepare_recipe_sysroot"
 do_create_manifest[depends] += "${PN}:do_patch"
+
+# Python's tests contain large numbers of files we don't need in the recipe sysroots
+SYSROOT_PREPROCESS_FUNCS += " py_sysroot_cleanup"
+py_sysroot_cleanup () {
+       rm -rf ${SYSROOT_DESTDIR}${libdir}/python${PYTHON_MAJMIN}/test
+}
