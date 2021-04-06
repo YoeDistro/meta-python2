@@ -19,4 +19,4 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 
 inherit distutils
 
-FILES_${PN} += "${datadir}${base_libdir}/${PYTHON_DIR}/site-packages/Pyrex/Compiler/Lexicon.pickle"
+FILES_${PN} += "${datadir}${baselib}/${PYTHON_DIR}/site-packages/Pyrex/Compiler/Lexicon.pickle"
