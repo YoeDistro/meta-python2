@@ -26,6 +26,10 @@ RDEPENDS_${PN}_class-target += " \
 
 inherit pypi setuptools
 
+do_install_append() {
+    mv ${D}${bindir}/chardetect ${D}${bindir}/chardetect-py2
+}
+
 RDEPENDS_${PN} += "${PYTHON_PN}-argparse"
 
 BBCLASSEXTEND = "native nativesdk"
