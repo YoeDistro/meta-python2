@@ -14,23 +14,23 @@ DEPENDS += "${PYTHON_PN}-pytest-runner-native"
 
 PACKAGES =+ "${PN}-cli"
 
-RDEPENDS_${PN}-cli = "${PN} "
+RDEPENDS:${PN}-cli = "${PN} "
 
-FILES_${PN}-cli += " \
+FILES:${PN}-cli += " \
     ${PYTHON_SITEPACKAGES_DIR}/chardet/cli \
 "
 
-RDEPENDS_${PN}_class-target += " \
+RDEPENDS:${PN}:class-target += " \
     ${PYTHON_PN}-logging \
 "
 
 inherit pypi setuptools
 
-do_install_append() {
+do_install:append() {
     mv ${D}${bindir}/chardetect ${D}${bindir}/chardetect-py2
 }
 
-RDEPENDS_${PN} += "${PYTHON_PN}-argparse"
+RDEPENDS:${PN} += "${PYTHON_PN}-argparse"
 
 BBCLASSEXTEND = "native nativesdk"
 

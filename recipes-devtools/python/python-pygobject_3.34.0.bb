@@ -22,7 +22,7 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 
 UNKNOWN_CONFIGURE_WHITELIST = "introspection"
 
-EXTRA_OEMESON_append = " -Dpython=python2"
+EXTRA_OEMESON:append = " -Dpython=python2"
 
 PACKAGECONFIG ??= "stagedir"
 
@@ -31,10 +31,10 @@ PACKAGECONFIG[tests] = "-Dtests=true, -Dtests=false, , "
 PACKAGECONFIG[stagedir] = "-Dstagedir=${PYTHON_SITEPACKAGES_DIR}, -Dstagedir="", , "
 
 BBCLASSEXTEND = "native"
-RDEPENDS_${PN} = "python-io python-pkgutil"
-RDEPENDS_${PN}_class-native = ""
+RDEPENDS:${PN} = "python-io python-pkgutil"
+RDEPENDS:${PN}:class-native = ""
 
-do_install_append() {
+do_install:append() {
     # Remove files that clash with python3-pygobject; their content is same
     rm -r ${D}${includedir}/pygobject-3.0/pygobject.h ${D}${libdir}/pkgconfig
 }

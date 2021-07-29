@@ -19,7 +19,7 @@ PYPI_PACKAGE_EXT = "zip"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-crypt \
     ${PYTHON_PN}-io \
     ${PYTHON_PN}-math \

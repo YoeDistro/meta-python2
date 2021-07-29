@@ -47,13 +47,13 @@ EXTRA_OECONF = "\
   ac_cv_header_bluetooth_bluetooth_h=no ac_cv_header_bluetooth_h=no \
 "
 
-do_configure_prepend() {
+do_configure:prepend() {
 	libdirleaf="$(echo ${libdir} | sed -e 's:${prefix}/::')"
 	sed -i -e "s:SEDMELIBLEAF:${libdirleaf}:g" \
 		${S}/configure.ac
 }
 
-do_install_append () {
+do_install:append () {
 	sed -i -e 's:${HOSTTOOLS_DIR}/install:install:g' \
 		-e 's:${HOSTTOOLS_DIR}/mkdir:mkdir:g' \
 		${D}/${libdir}/python${PYTHON_MAJMIN}/_sysconfigdata.py

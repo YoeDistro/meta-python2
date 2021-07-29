@@ -10,7 +10,7 @@ PYPI_PACKAGE = "Flask-Script"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-flask \
     "
 

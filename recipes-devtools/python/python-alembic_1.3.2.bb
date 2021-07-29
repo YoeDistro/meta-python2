@@ -7,7 +7,7 @@ SRC_URI[sha256sum] = "3b0cb1948833e062f4048992fbc97ecfaaaac24aaa0d83a1202a99fb58
 
 PYPI_PACKAGE = "alembic"
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-dateutil \
     ${PYTHON_PN}-editor \
     ${PYTHON_PN}-mako \

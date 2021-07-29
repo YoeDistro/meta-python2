@@ -24,7 +24,7 @@ DEPENDS += " \
 
 inherit pypi setuptools update-alternatives
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-logging \
     ${PYTHON_PN}-pyopenssl \
@@ -33,7 +33,7 @@ RDEPENDS_${PN} += " \
 
 UPSTREAM_CHECK_REGEX = ""
 
-ALTERNATIVE_${PN} = "ndg_httpclient"
+ALTERNATIVE:${PN} = "ndg_httpclient"
 ALTERNATIVE_LINK_NAME[ndg_httpclient] = "${bindir}/ndg_httpclient"
 ALTERNATIVE_PRIORITY = "20"
 

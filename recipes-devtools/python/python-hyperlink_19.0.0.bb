@@ -9,7 +9,7 @@ SRC_URI[md5sum] = "4772fb4d87c26a1ab22a6161424e3cba"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-idna \
     ${PYTHON_PN}-netclient \
     ${PYTHON_PN}-stringold \
@@ -17,7 +17,7 @@ RDEPENDS_${PN} += "\
 
 PACKAGES =. "${PN}-test "
 
-FILES_${PN}-test += " \
+FILES:${PN}-test += " \
         ${PYTHON_SITEPACKAGES_DIR}/hyperlinkt/test \
 "
 

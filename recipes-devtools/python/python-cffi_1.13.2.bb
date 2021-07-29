@@ -12,11 +12,11 @@ DEPENDS += "libffi ${PYTHON_PN}-pycparser"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-subprocess \
 "
 
-RDEPENDS_${PN}_class-target = " \
+RDEPENDS:${PN}:class-target = " \
     ${PYTHON_PN}-ctypes \
     ${PYTHON_PN}-io \
     ${PYTHON_PN}-pycparser \

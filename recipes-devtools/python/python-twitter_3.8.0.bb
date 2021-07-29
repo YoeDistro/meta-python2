@@ -11,7 +11,7 @@ PYPI_PACKAGE = "tweepy"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
         ${PYTHON_PN}-pip \
         ${PYTHON_PN}-pysocks \
         ${PYTHON_PN}-requests \

@@ -9,7 +9,7 @@ SRC_URI[sha256sum] = "0cdbac3e7f6878086c334aa25dc5a33869a3954e9d1e015130d65a6930
 
 PYPI_PACKAGE = "WTForms"
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-netserver \
     ${PYTHON_PN}-numbers \
     "

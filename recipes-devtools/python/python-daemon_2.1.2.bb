@@ -3,7 +3,7 @@ HOMEPAGE = "https://pagure.io/python-daemon/"
 SECTION = "devel/python"
 
 DEPENDS += "python-docutils-native"
-RDEPENDS_${PN} = "python-docutils \
+RDEPENDS:${PN} = "python-docutils \
                   python-lockfile (>= 0.10) \
                   python-resource \
 "
@@ -20,7 +20,7 @@ SRC_URI[sha256sum] = "261c859be5c12ae7d4286dc6951e87e9e1a70a882a8b41fd926efc1ec4
 #     i = p.rfind('/') + 1
 # AttributeError: 'NoneType' object has no attribute 'rfind'
 #S = "${WORKDIR}/python-daemon"
-SRC_URI_append = " \
+SRC_URI:append = " \
                   file://0001-Workaround-for-issue-2-1.patch \
 "
 

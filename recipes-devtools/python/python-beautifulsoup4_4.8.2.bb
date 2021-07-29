@@ -13,13 +13,13 @@ SRC_URI[sha256sum] = "05fd825eb01c290877657a56df4c6e4c311b3965bda790c613a3d6fb01
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     ${PYTHON_PN}-html5lib \
     ${PYTHON_PN}-lxml \
     ${PYTHON_PN}-soupsieve \
 "
 
-RDEPENDS_${PN}_append_class-target = "\
+RDEPENDS:${PN}:append:class-target = "\
     ${PYTHON_PN}-html \
     ${PYTHON_PN}-logging \
 "

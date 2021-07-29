@@ -21,7 +21,7 @@ PYPI_PACKAGE = "Click"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-contextlib \
     ${PYTHON_PN}-io \
     ${PYTHON_PN}-threading \

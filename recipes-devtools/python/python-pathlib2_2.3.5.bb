@@ -14,7 +14,7 @@ inherit pypi setuptools
 
 # Needs python-misc for ntpath
 # Could probably be removed by patching out Windows code
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-six \
     python-misc \
     python-scandir \

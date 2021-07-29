@@ -7,7 +7,7 @@ SRC_URI[sha256sum] = "030562f624467a9901f0b455fef05486a88cfb5daa1e356bd4aacea043
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target = "\
+RDEPENDS:${PN}:class-target = "\
     ${PYTHON_PN}-stringold \
 "
 

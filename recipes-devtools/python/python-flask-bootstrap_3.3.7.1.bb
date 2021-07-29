@@ -14,7 +14,7 @@ PYPI_PACKAGE = "Flask-Bootstrap"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-dominate \
     ${PYTHON_PN}-flask \
     ${PYTHON_PN}-visitor \

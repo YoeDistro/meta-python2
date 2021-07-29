@@ -18,14 +18,14 @@ PYPI_PACKAGE = "Werkzeug"
 CLEANBROKEN = "1"
 
 PACKAGES =+ "${PN}-tests"
-FILES_${PN}-tests+= " \
+FILES:${PN}-tests+= " \
     ${PYTHON_SITEPACKAGES_DIR}/werkzeug/test* \
     ${PYTHON_SITEPACKAGES_DIR}/werkzeug/__pycache__/test* \
     ${PYTHON_SITEPACKAGES_DIR}/werkzeug/contrib/test* \
     ${PYTHON_SITEPACKAGES_DIR}/werkzeug/contrib/__pycache__/test* \
 "
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-difflib \
     ${PYTHON_PN}-email \
@@ -43,7 +43,7 @@ RDEPENDS_${PN} += " \
     ${PYTHON_PN}-zlib \
 "
 
-RDEPENDS_${PN}-tests = " \
+RDEPENDS:${PN}-tests = " \
     ${PN} \
     ${PYTHON_PN}-unittest \
 "

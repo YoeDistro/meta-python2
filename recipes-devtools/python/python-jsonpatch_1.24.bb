@@ -9,7 +9,7 @@ SRC_URI[sha256sum] = "cbb72f8bf35260628aea6b508a107245f757d1ec839a19c34349985e2c
 inherit pypi setuptools
 
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-json \
     ${PYTHON_PN}-jsonpointer \
     ${PYTHON_PN}-netclient \

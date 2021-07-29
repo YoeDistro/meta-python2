@@ -9,7 +9,7 @@ HOMEPAGE = "http://www.pycrypto.org/"
 LICENSE = "PSFv2"
 LIC_FILES_CHKSUM = "file://COPYRIGHT;md5=35f354d199e8cb7667b059a23578e63d"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/python-pycrypto:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/python-pycrypto:"
 
 DEPENDS += " gmp"
 

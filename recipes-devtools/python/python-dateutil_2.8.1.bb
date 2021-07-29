@@ -16,10 +16,10 @@ PYPI_PACKAGE = "python-dateutil"
 inherit pypi setuptools
 
 PACKAGES =+ "${PN}-zoneinfo"
-FILES_${PN}-zoneinfo = "${libdir}/${PYTHON_DIR}/site-packages/dateutil/zoneinfo"
+FILES:${PN}-zoneinfo = "${libdir}/${PYTHON_DIR}/site-packages/dateutil/zoneinfo"
 
 
-RDEPENDS_${PN}_class-target = "\
+RDEPENDS:${PN}:class-target = "\
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-numbers \
     ${PYTHON_PN}-six \

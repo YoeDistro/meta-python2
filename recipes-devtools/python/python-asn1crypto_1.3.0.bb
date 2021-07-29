@@ -15,7 +15,7 @@ PYPI_PACKAGE = "asn1crypto"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += " \
+RDEPENDS:${PN}:class-target += " \
     ${PYTHON_PN}-codecs \
     ${PYTHON_PN}-crypt \
     ${PYTHON_PN}-ctypes \

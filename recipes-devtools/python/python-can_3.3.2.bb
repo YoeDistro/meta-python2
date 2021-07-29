@@ -16,7 +16,7 @@ PYPI_PACKAGE="python-can"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-argparse \
     ${PYTHON_PN}-ctypes \
     ${PYTHON_PN}-logging \

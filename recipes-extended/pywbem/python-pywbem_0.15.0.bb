@@ -34,13 +34,13 @@ DEPENDS += " \
 "
 
 
-do_install_append() {
+do_install:append() {
     mv ${D}${bindir}/wbemcli.py ${D}${bindir}/pywbemcli
 
     rm -f ${D}${bindir}/*.bat
 }
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-argparse \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-io \
@@ -58,7 +58,7 @@ RDEPENDS_${PN}_class-target += "\
     ${PYTHON_PN}-xml \
 "
 
-ALTERNATIVE_${PN} = "mof_compiler pywbemcli wbemcli"
+ALTERNATIVE:${PN} = "mof_compiler pywbemcli wbemcli"
 ALTERNATIVE_TARGET[mof_compiler] = "${bindir}/mof_compiler"
 ALTERNATIVE_TARGET[pywbemcli] = "${bindir}/pywbemcli"
 ALTERNATIVE_TARGET[wbemcli] = "${bindir}/wbemcli"

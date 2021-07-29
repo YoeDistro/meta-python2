@@ -16,7 +16,7 @@ SRC_URI[md5sum] = "d38355af73f0352cde3d410b25f34fd0"
 SRC_URI[sha256sum] = "5fd887c407015296a8fd3f4b867fe0fcca3179de97ccde90449853a3dfb802e1"
 
 DEPENDS += "gpgme"
-RDEPENDS_${PN} += "gnupg"
+RDEPENDS:${PN} += "gnupg"
 
 inherit pypi setuptools ptest
 

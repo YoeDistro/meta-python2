@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "723f24f4d65fc8d99b33a002fbbb3771d4cc9d664c97085bf37f3997ae
 
 inherit setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     python-distutils \
 "
 

@@ -5,7 +5,7 @@ SRCNAME = "daemonize"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
                python-fcntl \
                python-unixadmin \
                python-logging \

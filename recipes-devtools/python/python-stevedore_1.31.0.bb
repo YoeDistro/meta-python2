@@ -11,7 +11,7 @@ inherit pypi setuptools
 
 DEPENDS += "${PYTHON_PN}-pbr-native"
 
-RDEPENDS_${PN} += "${PYTHON_PN}-pbr ${PYTHON_PN}-six"
+RDEPENDS:${PN} += "${PYTHON_PN}-pbr ${PYTHON_PN}-six"
 
 BBCLASSEXTEND = "native"
 

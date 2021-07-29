@@ -11,7 +11,7 @@ inherit pypi setuptools
 SRC_URI[md5sum] = "02a46be841903b60c52a83342d3ced8e"
 SRC_URI[sha256sum] = "bfb8f464a5000b567ac1d350b9090cf081180ec1ab4aa87e7bca12dab25320ec"
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-json \
     ${PYTHON_PN}-pickle \
     ${PYTHON_PN}-logging \

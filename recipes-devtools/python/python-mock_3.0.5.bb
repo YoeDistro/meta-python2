@@ -10,7 +10,7 @@ inherit pypi setuptools
 DEPENDS += " \
     python-pbr-native"
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     python-prettytable \
     python-cmd2 \
     python-pyparsing \

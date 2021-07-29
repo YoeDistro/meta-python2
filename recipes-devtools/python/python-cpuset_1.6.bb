@@ -9,7 +9,7 @@ SRC_URI = "git://github.com/lpechacek/cpuset.git;protocol=https;"
 
 inherit distutils
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     python-core \
     python-re \
     python-logging \

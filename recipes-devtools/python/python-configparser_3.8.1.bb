@@ -13,7 +13,7 @@ SRC_URI[sha256sum] = "bc37850f0cc42a1725a796ef7d92690651bf1af37d744cc63161dac62c
 
 inherit pypi setuptools python-backports-init
 
-RDEPENDS_${PN} += "python-pkgutil"
+RDEPENDS:${PN} += "python-pkgutil"
 
 BBCLASSEXTEND = "native nativesdk"
 

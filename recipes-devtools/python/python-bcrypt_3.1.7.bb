@@ -13,7 +13,7 @@ DEPENDS += "${PYTHON_PN}-cffi-native"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-cffi \
     ${PYTHON_PN}-ctypes \
     ${PYTHON_PN}-shell \

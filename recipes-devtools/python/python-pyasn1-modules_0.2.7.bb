@@ -11,7 +11,7 @@ SRC_URI[sha256sum] = "0c35a52e00b672f832e5846826f1fb7507907f7d52fba6faa9e3c4cbe8
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "${PYTHON_PN}-pyasn1"
+RDEPENDS:${PN} = "${PYTHON_PN}-pyasn1"
 
 BBCLASSEXTEND = "native nativesdk"
 

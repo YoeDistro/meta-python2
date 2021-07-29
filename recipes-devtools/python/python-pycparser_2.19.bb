@@ -8,7 +8,7 @@ SRC_URI[sha256sum] = "a988718abfad80b6b157acce7bf130a30876d27603738ac39f14099324
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-ply \
     ${PYTHON_PN}-pprint \
     ${PYTHON_PN}-subprocess \

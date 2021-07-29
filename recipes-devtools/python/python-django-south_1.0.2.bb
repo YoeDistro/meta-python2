@@ -13,7 +13,7 @@ PYPI_PACKAGE = "South"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-django \
     "
 

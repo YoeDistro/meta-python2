@@ -21,7 +21,7 @@ DISTUTILS_INSTALL_ARGS += " \
     --install-scripts=${bindir} \
     --skip_init_scripts"
 
-do_install_append() {
+do_install:append() {
 
     # fix up hardcoded paths
     for file in gateone.service gateone-init 80oe.conf; do
@@ -46,8 +46,8 @@ do_install_append() {
     install -d ${D}${localstatedir}/lib/gateone
 }
 
-FILES_${PN} = "${localstatedir}/lib ${bindir} ${base_libdir} ${sysconfdir} ${PYTHON_SITEPACKAGES_DIR}"
-RDEPENDS_${PN} = "mime-support \
+FILES:${PN} = "${localstatedir}/lib ${bindir} ${base_libdir} ${sysconfdir} ${PYTHON_SITEPACKAGES_DIR}"
+RDEPENDS:${PN} = "mime-support \
                   openssh-ssh \
                   python-compression \
                   python-contextlib \
@@ -81,7 +81,7 @@ RDEPENDS_${PN} = "mime-support \
                   bash \
 "
 
-SYSTEMD_SERVICE_${PN} = "gateone.service"
+SYSTEMD_SERVICE:${PN} = "gateone.service"
 INITSCRIPT_NAME = "gateone"
 
 PNBLACKLIST[gateone] ?= "${@bb.utils.contains('I_SWEAR_TO_MIGRATE_TO_PYTHON3', 'yes', '', 'python2 is out of support for long time, read https://www.python.org/doc/sunset-python-2/ https://python3statement.org/ and if you really have to temporarily use this, then set I_SWEAR_TO_MIGRATE_TO_PYTHON3 to "yes"', d)}"

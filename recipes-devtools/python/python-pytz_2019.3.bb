@@ -8,7 +8,7 @@ inherit pypi setuptools
 SRC_URI[md5sum] = "c3d84a465fc56a4edd52cca8873ac0df"
 SRC_URI[sha256sum] = "b02c06db6cf09c12dd25137e563b31700d3b80fcc4ad23abb7a315f2789819be"
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-doctest \
     ${PYTHON_PN}-io \

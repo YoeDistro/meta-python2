@@ -7,8 +7,8 @@ PR = "r3"
 PYPI_PACKAGE = "Cheetah"
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "python-pickle python-pprint"
-RDEPENDS_${PN}_class-native = ""
+RDEPENDS:${PN} = "python-pickle python-pprint"
+RDEPENDS:${PN}:class-native = ""
 
 BBCLASSEXTEND = "native nativesdk"
 

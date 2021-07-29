@@ -12,7 +12,7 @@ PYPI_PACKAGE = "djangorestframework"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-django \
 "
 

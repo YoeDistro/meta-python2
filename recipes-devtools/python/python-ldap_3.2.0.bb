@@ -18,13 +18,13 @@ LIC_FILES_CHKSUM = "file://LICENCE;md5=36ce9d726d0321b73c1521704d07db1b"
 SRC_URI[md5sum] = "fe22522208dc9b06d16eb70f8553eaab"
 SRC_URI[sha256sum] = "7d1c4b15375a533564aad3d3deade789221e450052b21ebb9720fb822eccdb8e"
 
-do_configure_prepend() {
+do_configure:prepend() {
     sed -i -e 's:^library_dirs =.*::' setup.cfg
     sed -i -e 's:^include_dirs =.*:include_dirs = =/usr/include/sasl/:' setup.cfg
 }
 
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
     ${PYTHON_PN}-pprint \
     ${PYTHON_PN}-threading \
     ${PYTHON_PN}-pyasn1 \

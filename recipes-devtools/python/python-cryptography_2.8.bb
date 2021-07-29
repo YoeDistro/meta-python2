@@ -23,7 +23,7 @@ SRC_URI[sha256sum] = "3cda1f0ed8747339bbdf71b9f38ca74c7b592f24f65cdb3ab3765e4b02
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-cffi \
     ${PYTHON_PN}-idna \
     ${PYTHON_PN}-asn1crypto \
@@ -31,7 +31,7 @@ RDEPENDS_${PN} += " \
     ${PYTHON_PN}-six \
 "
 
-RDEPENDS_${PN}_class-target += " \
+RDEPENDS:${PN}:class-target += " \
     ${PYTHON_PN}-cffi \
     ${PYTHON_PN}-idna \
     ${PYTHON_PN}-numbers \
@@ -41,7 +41,7 @@ RDEPENDS_${PN}_class-target += " \
     ${PYTHON_PN}-threading \
 "
 
-RDEPENDS_${PN}-ptest += " \
+RDEPENDS:${PN}-ptest += " \
     ${PN} \
     ${PYTHON_PN}-cryptography-vectors \
     ${PYTHON_PN}-hypothesis \
@@ -60,7 +60,7 @@ do_install_ptest() {
     cp -rf ${S}/tests/hazmat/* ${D}${PTEST_PATH}/tests/hazmat/
 }
 
-FILES_${PN}-dbg += " \
+FILES:${PN}-dbg += " \
     ${libdir}/${PYTHON_PN}2.7/site-packages/${SRCNAME}/hazmat/bindings/.debug \
 "
 
@@ -72,12 +72,12 @@ DEPENDS += " \
     ${PYTHON_PN}-enum34 \
 "
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-enum34 \
     ${PYTHON_PN}-ipaddress \
 "
 
-RDEPENDS_${PN}_class-target += " \
+RDEPENDS:${PN}:class-target += " \
     ${PYTHON_PN}-enum34 \
     ${PYTHON_PN}-ipaddress \
     ${PYTHON_PN}-contextlib \

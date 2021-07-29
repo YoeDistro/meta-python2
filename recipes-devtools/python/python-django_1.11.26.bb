@@ -14,11 +14,11 @@ PYPI_PACKAGE = "Django"
 
 UPSTREAM_CHECK_REGEX = "(?P<pver>1(\.\d+)+)"
 
-FILES_${PN} += "${datadir}/django"
+FILES:${PN} += "${datadir}/django"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-argparse \
     ${PYTHON_PN}-compression \
     ${PYTHON_PN}-ctypes \

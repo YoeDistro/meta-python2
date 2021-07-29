@@ -11,7 +11,7 @@ PYPI_PACKAGE = "Mako"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
     ${PYTHON_PN}-html \
     ${PYTHON_PN}-misc \
     ${PYTHON_PN}-netclient \

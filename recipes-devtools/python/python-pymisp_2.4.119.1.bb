@@ -13,13 +13,13 @@ SRC_URI[sha256sum] = "594ea0a9e150052232425009eac6dd104a80f494d0e273cc48dd114d7e
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_append_class-target = " \
+RDEPENDS:${PN}:append:class-target = " \
     ${PYTHON_PN}-dateutil \
     ${PYTHON_PN}-json \
     ${PYTHON_PN}-jsonschema \
 "
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-cachetools \
     ${PYTHON_PN}-deprecated \
     ${PYTHON_PN}-requests \

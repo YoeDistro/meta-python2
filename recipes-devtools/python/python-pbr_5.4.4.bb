@@ -10,9 +10,9 @@ SRC_URI[sha256sum] = "139d2625547dbfa5fb0b81daebb39601c478c21956dc57e2e07b74450a
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "${PYTHON_PN}-pip"
+RDEPENDS:${PN} += "${PYTHON_PN}-pip"
 
-do_install_append() {
+do_install:append() {
         if [ -f ${D}${bindir}/pbr ]; then
                 mv ${D}${bindir}/pbr ${D}${bindir}/pbr-2
         fi

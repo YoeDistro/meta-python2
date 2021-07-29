@@ -13,13 +13,13 @@ PYPI_PACKAGE = "python-engineio"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_append_class-target = "\
+RDEPENDS:${PN}:append:class-target = "\
     ${PYTHON_PN}-compression \
     ${PYTHON_PN}-json \
     ${PYTHON_PN}-logging \
 "
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-six \
 "
 

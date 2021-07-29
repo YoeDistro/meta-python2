@@ -10,7 +10,7 @@ PYPI_PACKAGE = "robotframework-seriallibrary"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-pyserial \
     ${PYTHON_PN}-robotframework \
 "

@@ -3,7 +3,7 @@ LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=168ff75417f75a83e63c8875292d44dc"
 HOMEPAGE="https://bitbucket.org/mhallin/py-scrypt/overview"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/python-scrypt:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/python-scrypt:"
 
 SRC_URI += "file://0001-py-scrypt-remove-the-hard-coded-include-paths.patch"
 
@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "f8239b2d47fa1d40bc27efd231dc7083695d10c1c2ac51a99380360741
 
 inherit pypi setuptools python-dir
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
 "
 
 

@@ -12,11 +12,11 @@ PYPI_PACKAGE = "boolean.py"
 
 inherit pypi setuptools ptest
 
-RDEPENDS_${PN}_append_class-target = "\
+RDEPENDS:${PN}:append:class-target = "\
     ${PYTHON_PN}-lang \
 "
 
-RDEPENDS_${PN}-ptest += "\
+RDEPENDS:${PN}-ptest += "\
     ${PYTHON_PN}-unittest \
     ${PYTHON_PN}-pytest \
 "
@@ -26,7 +26,7 @@ do_install_ptest() {
     cp -rf ${S}/boolean/test_boolean.py  ${D}${PTEST_PATH}/boolean/
 }
 
-FILES_${PN}-test = ""
+FILES:${PN}-test = ""
 
 BBCLASSEXTEND = "native nativesdk"
 

@@ -43,9 +43,9 @@ SRC_URI[sha256sum] = "295784668032254e7391ca99ba7060edd3ae4eca1a330ac11627b18ab5
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = " python-logging python-compiler python-shell"
+RDEPENDS:${PN} = " python-logging python-compiler python-shell"
 # the above modules do not have a -native counterpart
-RDEPENDS_${PN}_class-native = ""
+RDEPENDS:${PN}:class-native = ""
 
 BBCLASSEXTEND = "native"
 

@@ -28,7 +28,7 @@ inherit pypi setuptools
 
 S = "${WORKDIR}/${PYPI_PACKAGE}-${PV}"
 
-RDEPENDS_${PN}_append_class-target = "\
+RDEPENDS:${PN}:append:class-target = "\
     ${PYTHON_PN}-lang \
     ${PYTHON_PN}-threading \
 "

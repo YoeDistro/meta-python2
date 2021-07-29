@@ -10,7 +10,7 @@ DISTUTILS_INSTALL_ARGS ?= "--root=${D} \
     --install-data=${datadir}"
 
 DISTUTILS_PYTHON = "python"
-DISTUTILS_PYTHON_class-native = "nativepython"
+DISTUTILS_PYTHON:class-native = "nativepython"
 
 distutils_do_configure() {
         if [ "${CLEANBROKEN}" != "1" ] ; then

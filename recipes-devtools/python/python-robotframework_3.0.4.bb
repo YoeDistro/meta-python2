@@ -15,7 +15,7 @@ inherit pypi setuptools
 SRC_URI[md5sum] = "ee753415645ff4831ff0d366a0467fe7"
 SRC_URI[sha256sum] = "ab94257cbd848dfca7148e092d233a12853cc7e840ce8231af9cbb5e7f51aa47"
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-ctypes \
     ${PYTHON_PN}-difflib \
     ${PYTHON_PN}-docutils \

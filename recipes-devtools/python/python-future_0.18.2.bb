@@ -13,7 +13,7 @@ PYPI_PACKAGE_HASH = "99abde815842bc6e97d5a7806ad51236630da14ca2f3b1fce94c0bb94d3
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_append_class-target = " python-misc"
+RDEPENDS:${PN}:append:class-target = " python-misc"
 
 BBCLASSEXTEND = "native"
 

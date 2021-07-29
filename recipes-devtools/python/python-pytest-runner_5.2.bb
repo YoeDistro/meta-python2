@@ -10,11 +10,11 @@ inherit pypi setuptools
 DEPENDS += " \
     ${PYTHON_PN}-setuptools-scm-native"
 
-RDEPENDS_${PN} = "${PYTHON_PN}-py ${PYTHON_PN}-setuptools ${PYTHON_PN}-debugger ${PYTHON_PN}-json \
+RDEPENDS:${PN} = "${PYTHON_PN}-py ${PYTHON_PN}-setuptools ${PYTHON_PN}-debugger ${PYTHON_PN}-json \
                   ${PYTHON_PN}-io"
 
 # Dependency only exists for python2
-RDEPENDS_${PN} += "python-argparse python-compiler"
+RDEPENDS:${PN} += "python-argparse python-compiler"
 
 BBCLASSEXTEND = "native nativesdk"
 

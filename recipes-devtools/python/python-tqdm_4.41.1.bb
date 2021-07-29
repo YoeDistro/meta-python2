@@ -10,7 +10,7 @@ inherit pypi setuptools
 SRC_URI[md5sum] = "aa3d5fd173c9fea7408cad14c0e73d5d"
 SRC_URI[sha256sum] = "4789ccbb6fc122b5a6a85d512e4e41fc5acad77216533a6f2b8ce51e0f265c23"
 
-RDEPENDS_${PN}_append_class-target = "\
+RDEPENDS:${PN}:append:class-target = "\
     ${PYTHON_PN}-lang \
     ${PYTHON_PN}-logging \
     ${PYTHON_PN}-numbers \

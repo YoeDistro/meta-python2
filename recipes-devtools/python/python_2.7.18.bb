@@ -4,7 +4,7 @@ DEPENDS = "libffi bzip2 gdbm openssl \
            readline sqlite3 zlib virtual/crypt"
 
 DISTRO_SRC_URI ?= "file://sitecustomize.py"
-DISTRO_SRC_URI_linuxstdbase = ""
+DISTRO_SRC_URI:linuxstdbase = ""
 SRC_URI += " \
            file://01-use-proper-tools-for-cross-build.patch \
            file://03-fix-tkinter-detection.patch \
@@ -54,7 +54,7 @@ EXTRA_OEMAKE = "PGEN=${STAGING_BINDIR_NATIVE}/python-native/pgen \
                 STAGING_BASELIBDIR=${STAGING_BASELIBDIR} \
                 "
 
-do_configure_append() {
+do_configure:append() {
 	rm -f ${S}/Makefile.orig
         autoreconf -Wcross --verbose --install --force --exclude=autopoint ../Python-${PV}/Modules/_ctypes/libffi
 }
@@ -125,7 +125,7 @@ do_install() {
     mv ${D}/${bindir}/2to3 ${D}/${bindir}/2to3-${PYTHON_MAJMIN}
 }
 
-do_install_append_class-nativesdk () {
+do_install:append:class-nativesdk () {
 	create_wrapper ${D}${bindir}/python2.7 PYTHONHOME='${prefix}' TERMINFO_DIRS='${sysconfdir}/terminfo:/etc/terminfo:/usr/share/terminfo:/usr/share/misc/terminfo:/lib/terminfo' PYTHONNOUSERSITE='1'
 }
 
@@ -148,33 +148,33 @@ py_package_preprocess () {
 	(cd ${PKGD}; python -m py_compile ./${libdir}/python${PYTHON_MAJMIN}/_sysconfigdata.py)
 }
 
-PACKAGES_remove = "${PN}"
+PACKAGES:remove = "${PN}"
 
 # manual dependency additions
-RPROVIDES_${PN}-modules = "${PN}"
-RRECOMMENDS_${PN}-core_append_class-nativesdk = " nativesdk-python-modules"
-RRECOMMENDS_${PN}-crypt = "${MLPREFIX}openssl"
+RPROVIDES:${PN}-modules = "${PN}"
+RRECOMMENDS:${PN}-core:append:class-nativesdk = " nativesdk-python-modules"
+RRECOMMENDS:${PN}-crypt = "${MLPREFIX}openssl"
 
 # package libpython2
 PACKAGES =+ "lib${BPN}2"
-FILES_lib${BPN}2 = "${libdir}/libpython*.so.*"
+FILES:lib${BPN}2 = "${libdir}/libpython*.so.*"
 
 # catch all the rest (unsorted)
 PACKAGES += "${PN}-misc"
-FILES_${PN}-misc = "${libdir}/python${PYTHON_MAJMIN}"
-RDEPENDS_${PN}-modules += "${PN}-misc"
+FILES:${PN}-misc = "${libdir}/python${PYTHON_MAJMIN}"
+RDEPENDS:${PN}-modules += "${PN}-misc"
 
 # ptest
-RDEPENDS_${PN}-ptest = "${PN}-modules ${PN}-tests unzip tzdata-europe coreutils sed"
-RDEPENDS_${PN}-tkinter += "${@bb.utils.contains('PACKAGECONFIG', 'tk', 'tk tk-lib', '', d)}"
+RDEPENDS:${PN}-ptest = "${PN}-modules ${PN}-tests unzip tzdata-europe coreutils sed"
+RDEPENDS:${PN}-tkinter += "${@bb.utils.contains('PACKAGECONFIG', 'tk', 'tk tk-lib', '', d)}"
 # catch manpage
 PACKAGES += "${PN}-man"
-FILES_${PN}-man = "${datadir}/man"
+FILES:${PN}-man = "${datadir}/man"
 
 # Nasty but if bdb isn't enabled the package won't be generated
-RDEPENDS_${PN}-modules_remove = "${@bb.utils.contains('PACKAGECONFIG', 'bdb', '', '${PN}-bsddb', d)}"
+RDEPENDS:${PN}-modules:remove = "${@bb.utils.contains('PACKAGECONFIG', 'bdb', '', '${PN}-bsddb', d)}"
 
-RDEPENDS_${PN}-dev = ""
+RDEPENDS:${PN}-dev = ""
 
 BBCLASSEXTEND = "nativesdk"
 
@@ -214,24 +214,24 @@ python(){
             newpackages.append(pypackage)
 
         # "Build" python's manifest FILES, RDEPENDS and SUMMARY
-        d.setVar('FILES_' + pypackage, '')
+        d.setVar('FILES:' + pypackage, '')
         for value in python_manifest[key]['files']:
-            d.appendVar('FILES_' + pypackage, ' ' + value)
+            d.appendVar('FILES:' + pypackage, ' ' + value)
             if include_pycs == '1':
                 if value.endswith('.py'):
-                    d.appendVar('FILES_' + pypackage, ' ' + value + '?')
+                    d.appendVar('FILES:' + pypackage, ' ' + value + '?')
 
         for value in python_manifest[key]['rdepends']:
             # Make it work with or without $PN
             if '${PN}' in value:
                 value=value.split('-')[1]
-            d.appendVar('RDEPENDS_' + pypackage, ' ' + pn + '-' + value)
-        d.setVar('SUMMARY_' + pypackage, python_manifest[key]['summary'])
+            d.appendVar('RDEPENDS:' + pypackage, ' ' + pn + '-' + value)
+        d.setVar('SUMMARY:' + pypackage, python_manifest[key]['summary'])
 
     # Prepending so to avoid python-misc getting everything
     packages = newpackages + packages
     d.setVar('PACKAGES', ' '.join(packages))
-    d.setVar('ALLOW_EMPTY_${PN}-modules', '1')
+    d.setVar('ALLOW_EMPTY:${PN}-modules', '1')
 }
 
 # Files needed to create a new manifest

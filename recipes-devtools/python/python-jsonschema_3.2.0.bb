@@ -5,7 +5,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING;md5=7a60a81c146ec25599a3e1dabb8610a8 \
                     file://json/LICENSE;md5=9d4de43111d33570c8fe49b4cb0e01af"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/python-jsonschema:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/python-jsonschema:"
 
 SRC_URI[md5sum] = "f1a0b5011f05a02a8dee1070cd10a26d"
 SRC_URI[sha256sum] = "c8a85b28d377cc7737e46e2d9f2b4f44ee3c0e1deac6bf46ddefc7187d30797a"
@@ -30,7 +30,7 @@ PACKAGECONFIG[nongpl] = ",,,\
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-argparse \
     ${PYTHON_PN}-attrs \
     ${PYTHON_PN}-contextlib \

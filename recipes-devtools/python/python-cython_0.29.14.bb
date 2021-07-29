@@ -18,7 +18,7 @@ PYPI_PACKAGE = "Cython"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-distribute \
     ${PYTHON_PN}-misc \
     ${PYTHON_PN}-netserver \
@@ -30,7 +30,7 @@ RDEPENDS_${PN}_class-target += "\
     ${PYTHON_PN}-xml \
 "
 
-RDEPENDS_${PN}_class-nativesdk += "\
+RDEPENDS:${PN}:class-nativesdk += "\
     nativesdk-${PYTHON_PN}-misc \
     nativesdk-${PYTHON_PN}-netserver \
     nativesdk-${PYTHON_PN}-pkgutil \
@@ -40,7 +40,7 @@ RDEPENDS_${PN}_class-nativesdk += "\
     nativesdk-${PYTHON_PN}-xml \
 "
 
-do_install_append() {
+do_install:append() {
 	# Make sure we use /usr/bin/env python
 	for PYTHSCRIPT in `grep -rIl '^#!.*python' ${D}`; do
 		sed -i -e '1s|^#!.*|#!/usr/bin/env ${PYTHON_PN}|' $PYTHSCRIPT

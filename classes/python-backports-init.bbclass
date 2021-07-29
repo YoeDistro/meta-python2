@@ -1,7 +1,7 @@
 inherit python-dir
 
-RDEPENDS_${PN} += "python-backports-init"
+RDEPENDS:${PN} += "python-backports-init"
 
-do_install_prepend() {
+do_install:prepend() {
     rm -rf $(find . -path "*/backports/__init__.py" -type f)
 }

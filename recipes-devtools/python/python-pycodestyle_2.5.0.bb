@@ -10,9 +10,9 @@ SRC_URI[sha256sum] = "e40a936c9a450ad81df37f549d676d127b1b66000a6c500caa2b085bc0
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "${PYTHON_PN}-lang"
+RDEPENDS:${PN} += "${PYTHON_PN}-lang"
 
-do_install_append () {
+do_install:append () {
         if [ -f ${D}${bindir}/pycodestyle ]; then
                 mv ${D}${bindir}/pycodestyle ${D}${bindir}/pycodestyle-2
         fi

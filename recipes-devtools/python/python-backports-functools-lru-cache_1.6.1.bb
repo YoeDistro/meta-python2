@@ -13,7 +13,7 @@ DEPENDS += "python-setuptools-scm-native"
 
 inherit setuptools pypi python-backports-init
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-pkgutil \
     ${PYTHON_PN}-pickle \
     ${PYTHON_PN}-threading \
@@ -24,7 +24,7 @@ do_install() {
     install ${B}/backports/functools_lru_cache.py ${D}${PYTHON_SITEPACKAGES_DIR}/backports/
 }
 
-FILES_${PN} = "${PYTHON_SITEPACKAGES_DIR}/backports/functools_lru_cache.py"
+FILES:${PN} = "${PYTHON_SITEPACKAGES_DIR}/backports/functools_lru_cache.py"
 
 BBCLASSEXTEND = "native nativesdk"
 

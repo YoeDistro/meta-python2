@@ -7,7 +7,7 @@ SRC_URI[sha256sum] = "38aeec7cdd035081d3a4c306394b19d677623bf76fa0913f6695127c77
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-pprint \
     ${PYTHON_PN}-textutils \
     ${PYTHON_PN}-xml \

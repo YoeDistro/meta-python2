@@ -10,7 +10,7 @@ SRC_URI[sha256sum] = "77f1aef9410698d20eaeac5b73a87817365f457a507d82edf292e12cbb
 PYPI_PACKAGE = "amqp"
 inherit setuptools pypi
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
 	python-vine \
 	"
 

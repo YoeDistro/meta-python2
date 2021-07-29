@@ -8,14 +8,14 @@ PYPI_PACKAGE_EXT = "zip"
 
 inherit pypi
 
-SRC_URI_append_class-native = " file://0001-conditionally-do-not-fetch-code-by-easy_install.patch"
+SRC_URI:append:class-native = " file://0001-conditionally-do-not-fetch-code-by-easy_install.patch"
 
 SRC_URI[md5sum] = "5ac69b66a6f7d4785517017f37df28e9"
 SRC_URI[sha256sum] = "c5b372090d7c8709ce79a6a66872a91e518f7d65af97fca78135e1cb10d4b940"
 
 DEPENDS += "${PYTHON_PN}"
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
   ${PYTHON_PN}-compile \
   ${PYTHON_PN}-compression \
   ${PYTHON_PN}-ctypes \
@@ -33,7 +33,7 @@ RDEPENDS_${PN} = "\
   ${PYTHON_PN}-unittest \
   ${PYTHON_PN}-xml \
 "
-do_install_prepend() {
+do_install:prepend() {
     install -d ${D}${PYTHON_SITEPACKAGES_DIR}
 }
 
@@ -43,4 +43,4 @@ BBCLASSEXTEND = "native nativesdk"
 # and easy_install. Ship it in a separate package so that it can be used by
 # minimal distributions.
 PACKAGES =+ "${PYTHON_PN}-pkg-resources "
-FILES_${PYTHON_PN}-pkg-resources = "${PYTHON_SITEPACKAGES_DIR}/pkg_resources/*"
+FILES:${PYTHON_PN}-pkg-resources = "${PYTHON_SITEPACKAGES_DIR}/pkg_resources/*"

@@ -23,7 +23,7 @@ PYPI_PACKAGE = "pyperf"
 
 DEPENDS += "${PYTHON_PN}-six-native"
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-contextlib \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-fcntl \

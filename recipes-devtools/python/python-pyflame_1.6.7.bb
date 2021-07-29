@@ -22,11 +22,11 @@ S = "${WORKDIR}/git"
 
 inherit pkgconfig autotools
 
-COMPATIBLE_HOST_libc-musl_class-target = "null"
-COMPATIBLE_HOST_mipsarch_class-target = "null"
-COMPATIBLE_HOST_aarch64_class-target = "null"
-COMPATIBLE_HOST_powerpc_class-target = "null"
-COMPATIBLE_HOST_riscv64_class-target = "null"
-COMPATIBLE_HOST_riscv32_class-target = "null"
+COMPATIBLE_HOST:libc-musl:class-target = "null"
+COMPATIBLE_HOST:mipsarch:class-target = "null"
+COMPATIBLE_HOST:aarch64:class-target = "null"
+COMPATIBLE_HOST:powerpc:class-target = "null"
+COMPATIBLE_HOST:riscv64:class-target = "null"
+COMPATIBLE_HOST:riscv32:class-target = "null"
 
 PNBLACKLIST[python-pyflame] ?= "${@bb.utils.contains('I_SWEAR_TO_MIGRATE_TO_PYTHON3', 'yes', '', 'python2 is out of support for long time, read https://www.python.org/doc/sunset-python-2/ https://python3statement.org/ and if you really have to temporarily use this, then set I_SWEAR_TO_MIGRATE_TO_PYTHON3 to "yes"', d)}"

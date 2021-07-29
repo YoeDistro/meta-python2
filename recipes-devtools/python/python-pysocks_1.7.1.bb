@@ -12,7 +12,7 @@ PYPI_PACKAGE = "PySocks"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-email \
     ${PYTHON_PN}-io \
     ${PYTHON_PN}-netclient \

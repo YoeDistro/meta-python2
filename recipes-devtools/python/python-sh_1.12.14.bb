@@ -11,7 +11,7 @@ PYPI_PACKAGE = "sh"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-codecs \
     ${PYTHON_PN}-contextlib \
     ${PYTHON_PN}-core \

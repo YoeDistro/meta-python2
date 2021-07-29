@@ -10,7 +10,7 @@ SRC_URI[sha256sum] = "aef1e34d98d7bec7cc368e0ca0f2e97493f9b5ebe6d7103f8f6460cfca
 PYPI_PACKAGE = "python-networkmanager"
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "networkmanager python-dbus python-six"
+RDEPENDS:${PN} = "networkmanager python-dbus python-six"
 
 python() {
     if 'networking-layer' not in d.getVar('BBFILE_COLLECTIONS').split():

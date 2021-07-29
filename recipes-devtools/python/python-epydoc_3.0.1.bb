@@ -8,7 +8,7 @@ SRC_URI[sha256sum] = "d4e5c8d90937d01b05170f592c1fa9b29e9ed0498dfe7f0eb2a3af6172
 
 inherit pypi distutils
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-codecs \
     ${PYTHON_PN}-pickle \
     ${PYTHON_PN}-stringold \

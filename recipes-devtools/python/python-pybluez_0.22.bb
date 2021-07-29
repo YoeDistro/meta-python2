@@ -19,7 +19,7 @@ PYPI_PACKAGE_EXT = "zip"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     bluez5 \
     ${PYTHON_PN}-fcntl \
 "

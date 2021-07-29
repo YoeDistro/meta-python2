@@ -15,7 +15,7 @@ PYPI_PACKAGE = "MarkupSafe"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "${PYTHON_PN}-re ${PYTHON_PN}-stringold"
+RDEPENDS:${PN} += "${PYTHON_PN}-re ${PYTHON_PN}-stringold"
 
 BBCLASSEXTEND = "native nativesdk"
 

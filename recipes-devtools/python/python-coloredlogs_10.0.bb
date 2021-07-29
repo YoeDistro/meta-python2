@@ -17,15 +17,15 @@ SRC_URI[sha256sum] = "b869a2dda3fa88154b9dd850e27828d8755bfab5a838a1c97fbc850c6e
 
 inherit pypi setuptools
 
-do_compile_prepend() {
+do_compile:prepend() {
     sed -ie "s/find_pth_directory(),/'',/g" ${S}/setup.py
 }
 
-do_install_append() {
+do_install:append() {
     rm -rf ${D}${datadir}
 }
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-humanfriendly \
 "
 

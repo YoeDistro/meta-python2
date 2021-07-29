@@ -5,7 +5,7 @@ PYTHON="${STAGING_BINDIR_NATIVE}/python-native/python"
 # PYTHON_EXECUTABLE is used by cmake
 PYTHON_EXECUTABLE="${PYTHON}"
 EXTRANATIVEPATH += "python-native"
-DEPENDS_append = " python-native "
+DEPENDS:append = " python-native "
 
 # python-config and other scripts are using distutils modules
 # which we patch to access these variables

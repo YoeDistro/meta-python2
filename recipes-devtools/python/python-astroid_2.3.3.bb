@@ -25,12 +25,12 @@ PACKAGES =+ "${PN}-tests"
 
 inherit pypi setuptools
 
-FILES_${PN}-tests += " \
+FILES:${PN}-tests += " \
     ${PYTHON_SITEPACKAGES_DIR}/astroid/test* \
     ${PYTHON_SITEPACKAGES_DIR}/astroid/__pycache__/test* \
 "
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-backports-functools-lru-cache \
     ${PYTHON_PN}-distutils \
     ${PYTHON_PN}-enum34 \
@@ -44,7 +44,7 @@ RDEPENDS_${PN}_class-target += "\
     ${PYTHON_PN}-wrapt \
 "
 
-RDEPENDS_${PN}-tests_class-target += "\
+RDEPENDS:${PN}-tests:class-target += "\
     ${PYTHON_PN}-unittest \
     ${PYTHON_PN}-xml \
 "

@@ -9,7 +9,7 @@ SRC_URI[sha256sum] = "979325468ccf682104d5dcaf753f869868100631301d3e72f47babdea5
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-ctypes \
     ${PYTHON_PN}-contextlib \
     ${PYTHON_PN}-subprocess \

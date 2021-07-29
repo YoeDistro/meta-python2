@@ -22,15 +22,15 @@ DEPENDS += "parted"
 
 S = "${WORKDIR}/git"
 
-RDEPENDS_${PN}_class-target += " \
+RDEPENDS:${PN}:class-target += " \
     parted (>= 2.3) \
 "
-RDEPENDS_${PN}_class-native = ""
+RDEPENDS:${PN}:class-native = ""
 
 inherit distutils
 
-RDEPENDS_${PN} += "python-stringold python-codecs python-math python-subprocess"
-RDEPENDS_${PN}_class-native = ""
+RDEPENDS:${PN} += "python-stringold python-codecs python-math python-subprocess"
+RDEPENDS:${PN}:class-native = ""
 
 BBCLASSEXTEND = "native"
 

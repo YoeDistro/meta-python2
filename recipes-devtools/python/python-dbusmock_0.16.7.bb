@@ -18,7 +18,7 @@ PYPI_PACKAGE = "python-dbusmock"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-dbus \
     ${PYTHON_PN}-pygobject \
     ${PYTHON_PN}-xml \

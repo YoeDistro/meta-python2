@@ -13,14 +13,14 @@ PYPI_PACKAGE = "pyOpenSSL"
 inherit pypi setuptools
 
 PACKAGES =+ "${PN}-tests"
-FILES_${PN}-tests = "${libdir}/${PYTHON_DIR}/site-packages/OpenSSL/test"
+FILES:${PN}-tests = "${libdir}/${PYTHON_DIR}/site-packages/OpenSSL/test"
 
-RDEPENDS_${PN}_class-target = " \
+RDEPENDS:${PN}:class-target = " \
     ${PYTHON_PN}-cryptography \
     ${PYTHON_PN}-six \
     ${PYTHON_PN}-threading \
 "
-RDEPENDS_${PN}-tests = "${PN}"
+RDEPENDS:${PN}-tests = "${PN}"
 
 BBCLASSEXTEND = "native nativesdk"
 

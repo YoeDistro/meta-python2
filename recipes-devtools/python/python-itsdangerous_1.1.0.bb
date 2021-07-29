@@ -10,7 +10,7 @@ inherit pypi setuptools
 
 CLEANBROKEN = "1"
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-netclient \
     ${PYTHON_PN}-simplejson \
     ${PYTHON_PN}-zlib \

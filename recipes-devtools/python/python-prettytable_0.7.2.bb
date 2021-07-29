@@ -15,7 +15,7 @@ inherit setuptools
 
 S = "${WORKDIR}/${SRCNAME}-${PV}"
 
-do_install_append() {
+do_install:append() {
     perm_files=`find "${D}${PYTHON_SITEPACKAGES_DIR}/" -name "*.txt" -o -name "PKG-INFO"`
     for f in $perm_files; do
         chmod 644 "${f}"

@@ -22,11 +22,11 @@ EXTRA_OECONF += "--disable-documentation"
 export STAGING_LIBDIR
 export STAGING_INCDIR
 
-RDEPENDS_${PN} = "python-io python-logging python-stringold python-threading python-xml"
+RDEPENDS:${PN} = "python-io python-logging python-stringold python-threading python-xml"
 
-FILES_${PN}-dev += "${libdir}/pkgconfig"
+FILES:${PN}-dev += "${libdir}/pkgconfig"
 
-do_install_append() {
+do_install:append() {
     # Remove files that clash with python3-dbus; their content is same
     rm ${D}${includedir}/dbus-1.0/dbus/dbus-python.h ${D}${libdir}/pkgconfig/dbus-python.pc
 }

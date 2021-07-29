@@ -16,9 +16,9 @@ inherit setuptools pypi
 
 PYPI_PACKAGE = "kombu"
 
-FILES_${PN}-doc += "${datadir}/${SRCNAME}"
+FILES:${PN}-doc += "${datadir}/${SRCNAME}"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
         python-amqp \
         "
 

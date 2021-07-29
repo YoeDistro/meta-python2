@@ -9,7 +9,7 @@ SRC_URI[sha256sum] = "605f89ad5fdbfefe30cdc293303665eff2d188865d4dbe4eb510bba1ed
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "${PYTHON_PN}-backports-functools-lru-cache"
+RDEPENDS:${PN} += "${PYTHON_PN}-backports-functools-lru-cache"
 
 BBCLASSEXTEND = "native nativesdk"
 

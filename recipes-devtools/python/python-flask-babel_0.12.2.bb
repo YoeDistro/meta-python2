@@ -14,7 +14,7 @@ PYPI_PACKAGE = "Flask-Babel"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-babel \
     ${PYTHON_PN}-flask \
     ${PYTHON_PN}-speaklater \

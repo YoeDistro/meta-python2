@@ -15,7 +15,7 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     ${PYTHON_PN}-core \
 "
 

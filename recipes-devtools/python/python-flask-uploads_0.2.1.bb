@@ -12,7 +12,7 @@ PYPI_PACKAGE = "Flask-Uploads"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-flask \
     "
 

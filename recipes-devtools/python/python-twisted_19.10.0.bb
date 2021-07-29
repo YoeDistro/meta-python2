@@ -10,7 +10,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1743f12d8b8f5aec625c0569a058f0a6"
 
 # allow for common patches for python- and python3-twisted
-FILESEXTRAPATHS_prepend := "${THISDIR}/python-twisted:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/python-twisted:"
 
 SRC_URI += "file://0001-fix-MemoryReactor-import-in-test_runner-to-be-from-t.patch"
 
@@ -20,7 +20,7 @@ SRC_URI[md5sum] = "f2d70f7a66ecdf54152310164cceadfe"
 PYPI_PACKAGE = "Twisted"
 PYPI_PACKAGE_EXT = "tar.bz2"
 
-do_install_append() {
+do_install:append() {
     # remove some useless files before packaging
     find ${D} \( -name "*.bat" -o -name "*.c" -o -name "*.h" \) -exec rm -f {} \;
 }
@@ -49,7 +49,7 @@ DEPENDS += " \
     ${PYTHON_PN}-incremental-native \
 "
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     ${PN}-bin \
     ${PN}-core \
     ${PN}-conch \
@@ -63,7 +63,7 @@ RDEPENDS_${PN} = "\
     ${PN}-zsh \
 "
 
-RDEPENDS_${PN}-core = " \
+RDEPENDS:${PN}-core = " \
     ${PYTHON_PN}-automat \
     ${PYTHON_PN}-constantly \
     ${PYTHON_PN}-core \
@@ -81,9 +81,9 @@ RDEPENDS_${PN}-core = " \
     ${PYTHON_PN}-zopeinterface \
 "
 
-RDEPENDS_${PN}-test = "${PN}"
+RDEPENDS:${PN}-test = "${PN}"
 
-RDEPENDS_${PN}-conch = " \
+RDEPENDS:${PN}-conch = " \
     ${PN}-core \
     ${PN}-protocols \
     ${PYTHON_PN}-bcrypt \
@@ -92,39 +92,39 @@ RDEPENDS_${PN}-conch = " \
     ${PYTHON_PN}-pyasn1 \
 "
 
-RDEPENDS_${PN}-mail = "${PN}-core ${PN}-protocols"
-RDEPENDS_${PN}-names = "${PN}-core"
-RDEPENDS_${PN}-news = "${PN}-core ${PN}-protocols"
-RDEPENDS_${PN}-runner = "${PN}-core ${PN}-protocols"
-RDEPENDS_${PN}-web += "${PN}-core ${PN}-protocols"
-RDEPENDS_${PN}-words += "${PN}-core"
-RDEPENDS_${PN}-flow += "${PN}-core"
-RDEPENDS_${PN}-pair += "${PN}-core"
-RDEPENDS_${PN}-dbg = "${PN}"
+RDEPENDS:${PN}-mail = "${PN}-core ${PN}-protocols"
+RDEPENDS:${PN}-names = "${PN}-core"
+RDEPENDS:${PN}-news = "${PN}-core ${PN}-protocols"
+RDEPENDS:${PN}-runner = "${PN}-core ${PN}-protocols"
+RDEPENDS:${PN}-web += "${PN}-core ${PN}-protocols"
+RDEPENDS:${PN}-words += "${PN}-core"
+RDEPENDS:${PN}-flow += "${PN}-core"
+RDEPENDS:${PN}-pair += "${PN}-core"
+RDEPENDS:${PN}-dbg = "${PN}"
 
-ALLOW_EMPTY_${PN} = "1"
-FILES_${PN} = ""
+ALLOW_EMPTY:${PN} = "1"
+FILES:${PN} = ""
 
-FILES_${PN}-test = " \
+FILES:${PN}-test = " \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/test \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/*/test \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/haproxy/test/ \
 "
 
-FILES_${PN}-protocols = " \
+FILES:${PN}-protocols = " \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/*.py* \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/gps/ \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/mice/ \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/protocols/haproxy \
 "
 
-FILES_${PN}-zsh = " \
+FILES:${PN}-zsh = " \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/python/zsh \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/python/zshcomp.* \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/python/twisted-completion.zsh \
 "
 
-FILES_${PN}-conch = " \
+FILES:${PN}-conch = " \
     ${bindir}/ckeygen \
     ${bindir}/tkconch \
     ${bindir}/conch \
@@ -134,7 +134,7 @@ FILES_${PN}-conch = " \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/conch  \
 "
 
-FILES_${PN}-core = " \
+FILES:${PN}-core = " \
 ${bindir}/manhole \
 ${bindir}/mktap \
 ${bindir}/twistd \
@@ -223,59 +223,59 @@ ${PYTHON_SITEPACKAGES_DIR}/twisted/_threads/ \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/positioning/ \
 "
 
-FILES_${PN}-mail = " \
+FILES:${PN}-mail = " \
 ${bindir}/mailmail \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_mail.py* \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/mail \
 "
 
-FILES_${PN}-names = " \
+FILES:${PN}-names = " \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_names.py* \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/names \
 "
 
-FILES_${PN}-news = " \
+FILES:${PN}-news = " \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_news.py* \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/news \
 "
 
-FILES_${PN}-runner = " \
+FILES:${PN}-runner = " \
 ${libdir}/site-packages/twisted/runner/portmap.so \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/runner\
 "
 
-FILES_${PN}-web = " \
+FILES:${PN}-web = " \
 ${bindir}/websetroot \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_web.py* \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/web\
 "
 
-FILES_${PN}-words = " \
+FILES:${PN}-words = " \
 ${bindir}/im \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_words.py* \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/words\
 "
 
-FILES_${PN}-flow = " \
+FILES:${PN}-flow = " \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_flow.py* \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/flow \"
 
-FILES_${PN}-pair = " \
+FILES:${PN}-pair = " \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/plugins/twisted_pair.py* \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/pair \
 "
 
-FILES_${PN}-dbg += " \
+FILES:${PN}-dbg += " \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/*/.debug \
 ${PYTHON_SITEPACKAGES_DIR}/twisted/*/*/.debug \
 "
 
-FILES_${PN}-doc += " \
+FILES:${PN}-doc += " \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/python/_pydoctortemplates/ \
 "
 
-RDEPENDS_${PN}-src = "${PN}"
-FILES_${PN}-src = " \
+RDEPENDS:${PN}-src = "${PN}"
+FILES:${PN}-src = " \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/*.py \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/*/*.py \
     ${PYTHON_SITEPACKAGES_DIR}/twisted/*/*/*.py \
@@ -283,9 +283,9 @@ FILES_${PN}-src = " \
 
 inherit pypi python-dir setuptools
 
-RDEPENDS_${PN}-core += "${PYTHON_PN}-contextlib"
+RDEPENDS:${PN}-core += "${PYTHON_PN}-contextlib"
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PN}-news \
 "
 

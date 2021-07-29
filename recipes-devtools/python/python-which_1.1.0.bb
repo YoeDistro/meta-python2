@@ -11,7 +11,7 @@ PYPI_SRC_URI = "git://github.com/trentm/which"
 
 S = "${WORKDIR}/git"
 
-do_install_append() {
+do_install:append() {
     rmdir -p --ignore-fail-on-non-empty ${D}${STAGING_BINDIR_NATIVE}
     rmdir -p --ignore-fail-on-non-empty ${D}${datadir}
 }

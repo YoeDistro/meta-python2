@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "33ee8ceb63f1db61cce8b5c800c531e1a61023ac5488ccde2ba574a85b
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += " \
+RDEPENDS:${PN}:class-target += " \
     ${PYTHON_PN}-datetime \
     ${PYTHON_PN}-fcntl \
     ${PYTHON_PN}-html \

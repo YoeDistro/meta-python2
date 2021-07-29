@@ -12,7 +12,7 @@ PYPI_PACKAGE = "Flask-SocketIO"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-flask \
     ${PYTHON_PN}-socketio \
     "

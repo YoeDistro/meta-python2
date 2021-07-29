@@ -8,7 +8,7 @@ SRC_URI[sha256sum] = "7b751696aaf36eebfab537e458929e194460051ccad279c72b755a167e
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ${PYTHON_PN}-twisted \
     ${PYTHON_PN}-click \
 "
@@ -16,7 +16,7 @@ RDEPENDS_${PN} += " \
 # -native is needed to build python[3]-twisted, however, we need to take steps to
 # prevent a circular dependency. The build apparently does not use the part of
 # python-incremental which uses python-twisted, so this hack is OK.
-RDEPENDS_${PYTHON_PN}-incremental-native_remove = "${PYTHON_PN}-twisted-native"
+RDEPENDS:${PYTHON_PN}-incremental-native:remove = "${PYTHON_PN}-twisted-native"
 BBCLASSEXTEND = "native"
 
 PNBLACKLIST[python-incremental] ?= "${@bb.utils.contains('I_SWEAR_TO_MIGRATE_TO_PYTHON3', 'yes', '', 'python2 is out of support for long time, read https://www.python.org/doc/sunset-python-2/ https://python3statement.org/ and if you really have to temporarily use this, then set I_SWEAR_TO_MIGRATE_TO_PYTHON3 to "yes"', d)}"

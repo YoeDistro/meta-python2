@@ -9,10 +9,10 @@ PYPI_PACKAGE = "setuptools_scm"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target = "${PYTHON_PN}-py ${PYTHON_PN}-setuptools ${PYTHON_PN}-debugger ${PYTHON_PN}-json"
-RDEPENDS_${PN}_class-native = "${PYTHON_PN}-setuptools-native"
+RDEPENDS:${PN}:class-target = "${PYTHON_PN}-py ${PYTHON_PN}-setuptools ${PYTHON_PN}-debugger ${PYTHON_PN}-json"
+RDEPENDS:${PN}:class-native = "${PYTHON_PN}-setuptools-native"
 
-RDEPENDS_${PN} += "${PYTHON_PN}-argparse"
+RDEPENDS:${PN} += "${PYTHON_PN}-argparse"
 
 BBCLASSEXTEND = "native"
 

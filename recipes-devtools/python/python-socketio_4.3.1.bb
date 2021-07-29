@@ -16,7 +16,7 @@ PACKAGECONFIG ?= ""
 PACKAGECONFIG[asyncio_client] = ",,,${PYTHON_PN}-aiohttp ${PYTHON_PN}-websockets"
 PACKAGECONFIG[client] = ",,,${PYTHON_PN}-requests ${PYTHON_PN}-websocket-client"
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-engineio \
     ${PYTHON_PN}-logging \
     ${PYTHON_PN}-math \

@@ -17,7 +17,7 @@ DEPENDS += "${PYTHON_PN}-setuptools-scm-native"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-argparse \
     ${PYTHON_PN}-doctest \
     ${PYTHON_PN}-pyparsing \

@@ -15,7 +15,7 @@ inherit pypi setuptools
 
 S = "${WORKDIR}/importlib_metadata-${PV}"
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-zipp \
     ${PYTHON_PN}-pathlib2 \
     python-compression \

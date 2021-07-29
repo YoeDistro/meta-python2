@@ -13,7 +13,7 @@ SRC_URI[sha256sum] = "98b1790977b435332c03ab2603f6621eeeee69a50453ac01ca55dc7696
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "python-cffi \
+RDEPENDS:${PN} = "python-cffi \
                   python-pycparser \
                   python-pysnmp \
                   python-setuptools \

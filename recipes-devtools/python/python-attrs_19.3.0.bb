@@ -17,7 +17,7 @@ SRC_URI[md5sum] = "5b2db50fcc31be34d32798183c9bd062"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += " \
+RDEPENDS:${PN}:class-target += " \
     ${PYTHON_PN}-crypt \
     ${PYTHON_PN}-ctypes \
     ${PYTHON_PN}-subprocess \

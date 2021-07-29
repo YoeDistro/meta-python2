@@ -9,19 +9,19 @@ PYPI_PACKAGE = "zope.interface"
 
 PACKAGES =. "${PN}-test "
 
-RPROVIDES_${PN} += "zope-interfaces"
+RPROVIDES:${PN} += "zope-interfaces"
 
-RDEPENDS_${PN}_class-target += "${PYTHON_PN}-datetime"
+RDEPENDS:${PN}:class-target += "${PYTHON_PN}-datetime"
 
-FILES_${PN}-dbg += "${PYTHON_SITEPACKAGES_DIR}/*.egg/*/*/.debug"
-FILES_${PN}-dev += "${PYTHON_SITEPACKAGES_DIR}/zope/interface/*.c"
-FILES_${PN}-doc += "${PYTHON_SITEPACKAGES_DIR}/zope/interface/*.txt"
-FILES_${PN}-test += " \
+FILES:${PN}-dbg += "${PYTHON_SITEPACKAGES_DIR}/*.egg/*/*/.debug"
+FILES:${PN}-dev += "${PYTHON_SITEPACKAGES_DIR}/zope/interface/*.c"
+FILES:${PN}-doc += "${PYTHON_SITEPACKAGES_DIR}/zope/interface/*.txt"
+FILES:${PN}-test += " \
         ${PYTHON_SITEPACKAGES_DIR}/zope/interface/tests \
         ${PYTHON_SITEPACKAGES_DIR}/zope/interface/common/tests \
 "
 inherit pypi setuptools
 
-RDEPENDS_${PN}-test += "python-unittest python-doctest"
+RDEPENDS:${PN}-test += "python-unittest python-doctest"
 
 PNBLACKLIST[python-zopeinterface] ?= "${@bb.utils.contains('I_SWEAR_TO_MIGRATE_TO_PYTHON3', 'yes', '', 'python2 is out of support for long time, read https://www.python.org/doc/sunset-python-2/ https://python3statement.org/ and if you really have to temporarily use this, then set I_SWEAR_TO_MIGRATE_TO_PYTHON3 to "yes"', d)}"

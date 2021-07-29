@@ -10,7 +10,7 @@ PYPI_PACKAGE = "msgpack"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     ${PYTHON_PN}-io \
 "
 

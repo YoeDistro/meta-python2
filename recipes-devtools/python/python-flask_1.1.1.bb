@@ -15,7 +15,7 @@ PYPI_PACKAGE = "Flask"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     ${PYTHON_PN}-click \
     ${PYTHON_PN}-itsdangerous \
     ${PYTHON_PN}-jinja2 \

@@ -17,7 +17,7 @@ DEPENDS = "${PYTHON_PN}-attrs"
 
 inherit pypi setuptools
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     ${PYTHON_PN}-enum34 \
     "
 
