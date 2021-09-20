@@ -21,7 +21,7 @@ SRC_URI[sha256sum] = "eff69ddbf3ad86375c344339371168640951c302450c5d3e9936e98d64
 
 DEPENDS += "libxml2 libxslt"
 
-inherit pypi setuptools
+inherit pypi setuptools pkgconfig
 
 # add to the defaults which are set in the setuptools bbclass
 #
