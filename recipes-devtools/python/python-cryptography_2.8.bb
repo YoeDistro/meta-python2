@@ -65,6 +65,9 @@ FILES:${PN}-dbg += " \
 "
 
 SRC_URI += " \
+    file://0001-remove-some-more-constants-we-don-t-need-5361.patch \
+    file://0002-remove-every-error-we-don-t-use-in-cryptography-or-p.patch \
+    file://0003-define-OAEP-properties-for-all-openssl-versions-5589.patch \
     file://run-ptest \
 "
 

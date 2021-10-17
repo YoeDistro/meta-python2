@@ -1,0 +1,32 @@
+From 9e5b84a9c0acc5f1e503495fd615439d82085188 Mon Sep 17 00:00:00 2001
+From: Paul Kehrer <paul.l.kehrer@gmail.com>
+Date: Mon, 27 Jul 2020 06:31:41 -0500
+Subject: [PATCH] remove every error we don't use in cryptography or pyopenssl
+ (#5355)
+
+* remove every error we don't use in cryptography or pyopenssl
+
+sorry external consumers, carrying things we don't use and don't have
+downstream tests for has become too much of a burden
+
+* re-add a constant we need for tests for now
+
+* pyopenssl needs these three
+
+MJ: remove only EVP_R_KEYGEN_FAILURE to fix build with openssl-3
+---
+ src/_cffi_src/openssl/err.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/_cffi_src/openssl/err.py b/src/_cffi_src/openssl/err.py
+index d4033f5a..f573bdf3 100644
+--- a/src/_cffi_src/openssl/err.py
++++ b/src/_cffi_src/openssl/err.py
+@@ -66,7 +66,6 @@ static const int EVP_R_DIFFERENT_KEY_TYPES;
+ static const int EVP_R_INITIALIZATION_ERROR;
+ static const int EVP_R_INPUT_NOT_INITIALIZED;
+ static const int EVP_R_INVALID_KEY_LENGTH;
+-static const int EVP_R_KEYGEN_FAILURE;
+ static const int EVP_R_MISSING_PARAMETERS;
+ static const int EVP_R_NO_CIPHER_SET;
+ static const int EVP_R_NO_DIGEST_SET;

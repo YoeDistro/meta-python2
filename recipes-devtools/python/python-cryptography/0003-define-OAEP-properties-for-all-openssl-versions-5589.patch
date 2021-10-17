@@ -1,0 +1,36 @@
+From 5df5945d7b613ffef80f50c3febac86358c93cc3 Mon Sep 17 00:00:00 2001
+From: Paul Kehrer <paul.l.kehrer@gmail.com>
+Date: Thu, 26 Nov 2020 11:52:47 -0600
+Subject: [PATCH] define OAEP properties for all openssl versions (#5589)
+
+In 3.0 these aren't macros so we can't test this way. All our supported
+OpenSSLs have these bindings now and LibreSSL does not.
+---
+ src/_cffi_src/openssl/rsa.py | 10 +++-------
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+
+diff --git a/src/_cffi_src/openssl/rsa.py b/src/_cffi_src/openssl/rsa.py
+index 216e633a..e2fbc422 100644
+--- a/src/_cffi_src/openssl/rsa.py
++++ b/src/_cffi_src/openssl/rsa.py
+@@ -60,17 +60,13 @@ int EVP_PKEY_CTX_set_rsa_oaep_md(EVP_PKEY_CTX *, EVP_MD *);
+ CUSTOMIZATIONS = """
+ static const long Cryptography_HAS_PSS_PADDING = 1;
+ 
+-#if defined(EVP_PKEY_CTX_set_rsa_oaep_md)
++#if !CRYPTOGRAPHY_IS_LIBRESSL
+ static const long Cryptography_HAS_RSA_OAEP_MD = 1;
+-#else
+-static const long Cryptography_HAS_RSA_OAEP_MD = 0;
+-int (*EVP_PKEY_CTX_set_rsa_oaep_md)(EVP_PKEY_CTX *, EVP_MD *) = NULL;
+-#endif
+-
+-#if defined(EVP_PKEY_CTX_set0_rsa_oaep_label)
+ static const long Cryptography_HAS_RSA_OAEP_LABEL = 1;
+ #else
++static const long Cryptography_HAS_RSA_OAEP_MD = 0;
+ static const long Cryptography_HAS_RSA_OAEP_LABEL = 0;
++int (*EVP_PKEY_CTX_set_rsa_oaep_md)(EVP_PKEY_CTX *, EVP_MD *) = NULL;
+ int (*EVP_PKEY_CTX_set0_rsa_oaep_label)(EVP_PKEY_CTX *, unsigned char *,
+                                         int) = NULL;
+ #endif
