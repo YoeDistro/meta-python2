@@ -27,7 +27,7 @@ RDEPENDS:${PN}:class-target += " \
 "
 RDEPENDS:${PN}:class-native = ""
 
-inherit distutils
+inherit distutils pkgconfig
 
 RDEPENDS:${PN} += "python-stringold python-codecs python-math python-subprocess"
 RDEPENDS:${PN}:class-native = ""
