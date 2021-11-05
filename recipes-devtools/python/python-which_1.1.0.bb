@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=030b09798681482b9ad12ac47be496ea"
 inherit setuptools pypi python-dir
 
 SRCREV = "425bdeeb2d87c36e2313dc4b8d69ff2bb5a02ee9"
-PYPI_SRC_URI = "git://github.com/trentm/which"
+PYPI_SRC_URI = "git://github.com/trentm/which;branch=master;protocol=https"
 
 S = "${WORKDIR}/git"
 

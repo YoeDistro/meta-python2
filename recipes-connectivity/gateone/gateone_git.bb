@@ -5,7 +5,7 @@ HOMEPAGE = "http://liftoffsoftware.com/Products/GateOne"
 
 PV = "1.2+git${SRCPV}"
 SRCREV = "f7a9be46cb90f57459ebd363d24702de0e651034"
-SRC_URI = "git://github.com/liftoff/GateOne.git;branch=master \
+SRC_URI = "git://github.com/liftoff/GateOne.git;branch=master;protocol=https \
            file://gateone-avahi.service \
            file://80oe.conf.in \
            file://gateone.service.in \
