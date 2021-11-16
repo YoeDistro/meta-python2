@@ -20,7 +20,7 @@ SRC_URI[sha256sum] = "87e2c9aa785f352ef111dcc5f63df9b85cf6e05e52ff04f803ffbebdac
 
 S = "${WORKDIR}/${SRCNAME}-${PV}"
 
-UNKNOWN_CONFIGURE_WHITELIST = "introspection"
+GIR_MESON_OPTION = ""
 
 EXTRA_OEMESON:append = " -Dpython=python2"
 
