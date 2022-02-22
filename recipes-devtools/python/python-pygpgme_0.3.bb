@@ -3,7 +3,7 @@ DESCRIPTION = "PyGPGME is a Python module that lets you sign, verify, \
                encrypt and decrypt messages using the OpenPGP format."
 HOMEPAGE = "https://launchpad.net/pygpgme"
 
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://PKG-INFO;beginline=8;endline=8;md5=6517bdc8f2416f27ab725d4702f7aac3"
 
 SRC_URI = "file://run-ptest \

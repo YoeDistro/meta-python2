@@ -1,6 +1,6 @@
 SUMMARY = "PIP is a tool for installing and managing Python packages"
 HOMEPAGE = "https://pip.pypa.io/"
-LICENSE = "MIT & LGPL-2.1"
+LICENSE = "MIT & LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=8ba06d529c955048e5ddd7c45459eb2e"
 
 SRC_URI[md5sum] = "1aaaf90fbafc50e7ba1e66ffceb00960"

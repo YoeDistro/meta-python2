@@ -6,7 +6,7 @@ SECTION = "devel/python"
 
 DEPENDS = "bluez5"
 
-LICENSE = "GPL-2.0"
+LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=8a71d0475d08eee76d8b6d0c6dbec543"
 
 SRC_URI[md5sum] = "49dab9d5a8f0b798c8125c7f649be3cd"

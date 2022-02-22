@@ -1,5 +1,5 @@
 SUMMARY = "Backport of the functools module from Python 3.2.3 for use on 2.7 and PyPy."
-LICENSE = "PSF"
+LICENSE = "PSF-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=27cf2345969ed18e6730e90fb0063a10"
 
 SRC_URI[md5sum] = "09f24ffd9af9f6cd0f63cb9f4e23d4b2"

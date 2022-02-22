@@ -10,7 +10,7 @@ and harvested keys, as well a script to harvest DNSKEY's from DNS. \
 See also: system-config-dnssec"
 HOMEPAGE = "https://github.com/xelerance/dnssec-conf"
 SECTION = "net"
-LICENSE = "GPLv2+"
+LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=0636e73ff0215e8d672dc4c32c317bb3"
 DEPENDS += "xmlto-native docbook-xml-dtd4-native \
             docbook-xsl-stylesheets-native libxslt-native"

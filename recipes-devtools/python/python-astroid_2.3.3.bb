@@ -13,7 +13,7 @@ also build partial trees by inspecting living objects."
 HOMEPAGE = "https://pypi.python.org/pypi/astroid"
 SECTION = "devel/python"
 
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
 SRC_URI[md5sum] = "5f3d73d82d1753b59bb49a6bc6046dee"

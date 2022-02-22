@@ -6,7 +6,7 @@ cars, trucks, boats, wheelchairs and more."
 HOMEPAGE = "https://github.com/hardbyte/python-can"
 SECTION = "devel/python"
 
-LICENSE = "LGPL-3.0"
+LICENSE = "LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=e6a600fd5e1d9cbde2d983680233ad02"
 
 SRC_URI[md5sum] = "b724553a330478270267380b4888a18e"

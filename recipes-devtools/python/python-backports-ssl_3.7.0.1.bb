@@ -6,7 +6,7 @@ on your own. So the ssl package in the Standard Library of Python 3.2 and greate
 match_hostname() function for performing this check instead of requiring every application to \
 implement the check separately. This backport brings match_hostname() to users of earlier versions of Python"
 
-LICENSE = "GPLv2"
+LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://PKG-INFO;md5=b2adbe8bfdeb625c9a01afd9aaa66619"
 
 SRC_URI[md5sum] = "32d2f593af01a046bec3d2f5181a420a"

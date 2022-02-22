@@ -3,7 +3,7 @@
 SUMMARY = "With this program/Python library you can easily create mock objects on D-Bus"
 AUTHOR = "Martin Pitt <martin.pitt@ubuntu.com>"
 
-LICENSE = "GPL-3.0"
+LICENSE = "GPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=e6a600fd5e1d9cbde2d983680233ad02"
 
 SRC_URI[md5sum] = "80f8caa838fad96483a8751e11d384f9"

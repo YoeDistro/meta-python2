@@ -1,5 +1,5 @@
 SUMMARY = "HTML5 (plugin-free) web-based terminal emulator and SSH client"
-LICENSE = "AGPL-3.0"
+LICENSE = "AGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=834cbc6995db88433db17cdf8953a428"
 HOMEPAGE = "http://liftoffsoftware.com/Products/GateOne"
 

@@ -1,5 +1,5 @@
 SUMMARY = "Backport of the selectors module from Python 3.4"
-LICENSE = "PSF"
+LICENSE = "PSF-2.0"
 LIC_FILES_CHKSUM = "file://PKG-INFO;md5=2fae0222c31d6c10488d4ab93a863af7"
 
 SRC_URI[md5sum] = "bc855a1c8839a811476c019dc07d92dd"

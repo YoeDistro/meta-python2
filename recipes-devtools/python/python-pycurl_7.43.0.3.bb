@@ -8,7 +8,7 @@ be used to fetch objects identified by a URL from a Python program \
 SECTION = "devel/python"
 HOMEPAGE = "http://pycurl.io/"
 
-LICENSE = "LGPLv2 | MIT"
+LICENSE = "LGPL-2.0-only | MIT"
 LIC_FILES_CHKSUM = " \
     file://COPYING-LGPL;md5=4fbd65380cdd255951079008b364516c \
     file://COPYING-MIT;md5=2df767ed35d8ea83de4a93feb55e7815 \

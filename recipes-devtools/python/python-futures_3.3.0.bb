@@ -1,6 +1,6 @@
 DESCRIPTION = "The concurrent.futures module provides a high-level interface for asynchronously executing callables."
 SECTION = "devel/python"
-LICENSE = "PSF"
+LICENSE = "PSF-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=834d982f973c48b6d662b5944c5ab567"
 HOMEPAGE = "https://github.com/agronholm/pythonfutures"
 DEPENDS = "python"

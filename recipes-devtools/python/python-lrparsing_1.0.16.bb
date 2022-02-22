@@ -2,7 +2,7 @@ SUMMARY = "Python LR parsing library"
 HOMEPAGE = "http://lrparsing.sourceforge.net/"
 BUGTRACKER = "https://sourceforge.net/p/lrparsing/tickets/"
 SECTION = "devel/python"
-LICENSE = "AGPL-3.0"
+LICENSE = "AGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://agpl-3.0.txt;md5=73f1eb20517c55bf9493b7dd6e480788"
 
 SRC_URI = "${SOURCEFORGE_MIRROR}/lrparsing/lrparsing-${PV}.tar.gz"

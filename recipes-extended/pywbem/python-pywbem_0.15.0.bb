@@ -15,7 +15,7 @@ way to write providers on the planet."
 HOMEPAGE = "http://pywbem.github.io"
 SECTION = "devel/python"
 
-LICENSE = "LGPLv2.1"
+LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=fbc093901857fcd118f065f900982c24"
 
 inherit pypi setuptools update-alternatives

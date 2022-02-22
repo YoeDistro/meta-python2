@@ -1,7 +1,7 @@
 SUMMARY = "Smart replacement for plain tuple used in __version__"
 SECTION = "devel/python"
 HOMEPAGE = "https://launchpad.net/versiontools"
-LICENSE = "LGPLv3"
+LICENSE = "LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://setup.py;beginline=3;endline=20;md5=02193721a38fd8a05a4ddeb7df8e294d"
 
 inherit pypi setuptools

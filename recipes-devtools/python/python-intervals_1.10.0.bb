@@ -4,7 +4,7 @@ intervals in Python 2.7+ and Python 3.4+."
 HOMEPAGE = "https://github.com/AlexandreDecan/python-intervals"
 SECTION = "devel/python"
 
-LICENSE = "LGPLv3"
+LICENSE = "LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=05f1e16a8e59ce3e9a979e881816c2ab"
 
 SRC_URI[md5sum] = "8955317ff4e42590c90ba6247b1caaed"

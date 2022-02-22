@@ -1,7 +1,7 @@
 SUMMARY = "Python GObject bindings"
 HOMEPAGE = "http://www.pygtk.org/"
 SECTION = "devel/python"
-LICENSE = "LGPLv2.1"
+LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a916467b91076e631dd8edb7424769c7"
 
 GNOMEBASEBUILDCLASS = "meson"

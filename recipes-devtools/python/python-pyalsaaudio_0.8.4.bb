@@ -1,7 +1,7 @@
 
 SUMMARY = "Support for the Linux 2.6.x ALSA Sound System"
 SECTION = "devel/python"
-LICENSE = "PSF"
+LICENSE = "PSF-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1a3b161aa0fcec32a0c8907a2219ad9d"
 
 SRC_URI[md5sum] = "b46f69561bc85fc52e698b2440ca251e"

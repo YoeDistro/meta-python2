@@ -6,7 +6,7 @@ This section is essentially complete, and the software interface will almost \
 certainly not change in an incompatible way in the future; all that remains to \
 be done is to fix any bugs that show up."
 HOMEPAGE = "http://www.pycrypto.org/"
-LICENSE = "PSFv2"
+LICENSE = "PSF-2.0"
 LIC_FILES_CHKSUM = "file://COPYRIGHT;md5=35f354d199e8cb7667b059a23578e63d"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/python-pycrypto:"

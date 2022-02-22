@@ -1,6 +1,6 @@
 SUMMARY = "collections.abc from Python 3.5"
 DESCRIPTION = "A backport of recent additions to the 'collections.abc' module"
-LICENSE = "PSF"
+LICENSE = "PSF-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=dd98d01d471fac8d8dbdd975229dba03"
 
 PYPI_PACKAGE = "backports_abc"

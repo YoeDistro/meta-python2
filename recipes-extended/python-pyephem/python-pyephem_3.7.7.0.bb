@@ -1,7 +1,7 @@
 SUMMARY = "PyEphem astronomical calculations"
 HOMEPAGE = "http://rhodesmill.org/pyephem/"
 
-LICENSE = "LGPL-3.0"
+LICENSE = "LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f288303760f6e5ceaafe3aaa32186ab1"
 
 SRC_URI[md5sum] = "46c035b4a903ff26e0d8ad0f1fe6cc35"
