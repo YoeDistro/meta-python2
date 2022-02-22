@@ -22,16 +22,16 @@ CVE_PRODUCT = "python"
 
 # Upstream agreement is that these are not security issues:
 # https://bugs.python.org/issue32367
-CVE_CHECK_WHITELIST += "CVE-2017-17522"
+CVE_CHECK_IGNORE += "CVE-2017-17522"
 # https://bugs.python.org/issue32056
-CVE_CHECK_WHITELIST += "CVE-2017-18207"
+CVE_CHECK_IGNORE += "CVE-2017-18207"
 
 # Windows-only, "It was determined that this is a longtime behavior
 # of Python that cannot really be altered at this point."
-CVE_CHECK_WHITELIST += "CVE-2015-5652"
+CVE_CHECK_IGNORE += "CVE-2015-5652"
 
 # This is not exploitable when glibc has CVE-2016-10739 fixed.
-CVE_CHECK_WHITELIST += "CVE-2019-18348"
+CVE_CHECK_IGNORE += "CVE-2019-18348"
 
 PYTHON_MAJMIN = "2.7"
 
