@@ -17,7 +17,7 @@ compiler to allow the C extension to be compiled."
 HOMEPAGE = "https://github.com/GrahamDumpleton/wrapt"
 SECTION = "devel/python"
 
-LICENSE = "BSD"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fdfc019b57affbe1d7a32e3d34e83db4"
 
 PYPI_PACKAGE = "wrapt"

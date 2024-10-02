@@ -4,7 +4,7 @@ mostly consists of a blueprint named ‘bootstrap’. It can also create links t
 serve Bootstrap from a CDN and works with no boilerplate code in your application."
 HOMEPAGE = "http://github.com/mbr/flask-bootstrap"
 
-LICENSE = "BSD"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://PKG-INFO;md5=a03749709f06118a17349deb5a210619"
 
 SRC_URI[md5sum] = "e40d50f5c5b6438c1c6200a6f2871f81"

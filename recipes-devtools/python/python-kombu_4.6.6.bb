@@ -6,7 +6,7 @@ DESCRIPTION = "A messaging framework for Python"
 BUGTRACKER = "http://github.com/celery/kombu/issues/"
 HOMEPAGE = "http://kombu.readthedocs.org"
 SECTION = "devel/python"
-LICENSE = "BSD"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=daea7c168428449fbee05e644df929f4"
 
 SRC_URI[md5sum] = "5f751ea817b1f6a4293d4e3a01040d4f"

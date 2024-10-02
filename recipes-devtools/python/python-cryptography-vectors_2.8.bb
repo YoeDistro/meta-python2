@@ -5,7 +5,7 @@ standard library'."
 HOMEPAGE = "https://cryptography.io/"
 SECTION = "devel/python"
 
-LICENSE = "Apache-2.0 | BSD"
+LICENSE = "Apache-2.0 | BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8c3617db4fb6fae01f1d253ab91511e4"
 
 SRC_URI[md5sum] = "a744ed29bb9ef56b3a50317fea3b218e"

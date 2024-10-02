@@ -5,7 +5,7 @@ support for parsing, splitting and formatting SQL statements."
 HOMEPAGE = "https://github.com/andialbrecht/sqlparse"
 SECTION = "devel/python"
 
-LICENSE = "BSD"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=2b136f573f5386001ea3b7b9016222fc"
 
 SRC_URI[md5sum] = "2ce34181d6b7b234c9f3c0ecd1ffb93e"

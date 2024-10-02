@@ -2,7 +2,7 @@ SUMMARY = "Core utilities for Python packages"
 DESCRIPTION = "The packaging project includes the following: version handling, \
 specifiers, markers, requirements, tags, utilities."
 HOMEPAGE = "https://github.com/pypa/packaging"
-LICENSE = "Apache-2.0 & BSD"
+LICENSE = "Apache-2.0 & BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=faadaedca9251a90b205c9167578ce91"
 
 SRC_URI[md5sum] = "93d6ccbdfcb5b7697b6ecea53ecc294b"

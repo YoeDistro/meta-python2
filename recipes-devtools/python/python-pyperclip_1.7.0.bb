@@ -1,7 +1,7 @@
 SUMMARY = "A cross-platform clipboard module for Python."
 DESCRIPTION = "Pyperclip is a cross-platform Python module for copy and paste \
 clipboard functions (only handles plain text for now)."
-LICENSE = "BSD"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://PKG-INFO;md5=a428356ada7737b416ec4b63dc65d581"
 
 SRC_URI[md5sum] = "6bbb8598579cc3ee50554b4c59d0cfae"

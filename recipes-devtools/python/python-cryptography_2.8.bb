@@ -6,7 +6,7 @@ standard library'."
 HOMEPAGE = "https://cryptography.io/"
 SECTION = "devel/python"
 
-LICENSE = "Apache-2.0 | BSD"
+LICENSE = "Apache-2.0 | BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=097f805837700cfac572ac274cd38124"
 
 LDSHARED += "-pthread"
