@@ -2,7 +2,7 @@ SUMMARY = "Python bindings for libparted"
 DESCRIPTION = "pyparted is a set of Python modules that provide Python programmers \
 an interface to libparted, the GNU parted library for disk partitioning and \
 filesystem manipulation."
-HOMEPAGE = "https://github.com/rhinstaller/pyparted"
+HOMEPAGE = "https://github.com/dcantrell/pyparted"
 SECTION = "devel/python"
 
 LICENSE = "GPL-2.0-or-later"
@@ -16,7 +16,7 @@ PV = "3.11.4+git${SRCPV}"
 
 # upstream only publishes releases in github archives which are discouraged
 SRCREV = "104ca13567c08c1188b126a395c4602841aae2c6"
-SRC_URI = "git://github.com/rhinstaller/pyparted.git;protocol=https;branch=master"
+SRC_URI = "git://github.com/dcantrell/pyparted.git;protocol=https;branch=main"
 
 DEPENDS += "parted"
 
